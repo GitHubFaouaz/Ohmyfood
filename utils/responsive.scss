@@ -1,0 +1,194 @@
+@mixin tablette {
+@media  screen and (min-width: 769px){ 
+    #bloc-page{
+    max-width: 991px;   
+        
+}
+
+
+    
+    
+    header{
+        background: white;
+        h1{
+            
+                margin: 10px 0 5px 0;
+                
+        }
+    }
+
+    #sectionReservation {
+        
+        
+        grid-template-columns: 2fr 2fr;
+        background: $grid;
+        margin-bottom: 1rem;
+        box-shadow: 0px 0px 5px #0e0e0ef2;
+        padding-bottom: 0;
+        grid-template-rows: 100%;
+        border-bottom: #9356DC solid 3px;
+    
+        #reservation--local{
+            p{
+                font-size: 24px;
+            }
+        }
+        #reservation--search{
+          h2{
+               margin: 3rem 0;
+          }
+          span{
+              margin-bottom: 3rem;
+              text-align: center;
+              font-size: 1.3rem;
+          }
+          button{
+              font-size: 25px;
+          }
+           
+        }
+        
+    
+
+    #function{
+        grid-template-rows: 0fr;
+        padding-bottom: 3rem;
+        box-shadow: 1px 1px 10px #05050538  inset;
+
+        h2{
+            grid-column-start: 1;
+            grid-column-end: 4;
+            margin: 0px 0 0px 0;
+            text-align: center;
+            padding: 20px 0;
+            box-shadow: 0px 3px 3px #44444452 inset;
+            background: #cecccc99;
+
+         
+        }
+        .function-etape{
+            margin: 3rem 0 0 0;
+        }
+
+    }
+}
+    
+
+    #sectionRestaurant{
+        box-shadow: 0px 0px 5px #050505;
+        grid-template-columns: 0% 1fr 1fr 0%;
+        border-top: #9356DC solid 3px;
+        gap: 1rem 3rem;
+
+        
+        & :nth-child(3){
+           
+            grid-column-start: 3;
+            grid-row-start: 2;
+        }
+        & :nth-child(5){
+           
+            grid-column-start: 3;
+            grid-row-start: 3;
+        }
+    }
+
+    }
+}
+
+@mixin desktop {
+    @media  screen and (min-width:992px){
+        #bloc-page{
+            max-width: 1550px;   
+              
+        }
+    
+        #sectionReservation {
+            
+            grid-template-columns: 2fr;
+            grid-template-rows: 62% 38%; 
+            #reservation--local{
+               
+                    p{
+                        
+                        margin:  0;
+                        font-weight: bold;
+                        font-size: 20px;
+                        
+                    }
+                   
+            
+                }
+            
+                #reservation--search{
+                   
+                   
+                    h2{
+                        margin: 2rem 0;
+                    }
+                    span{ margin-bottom: 2rem; 
+                    } 
+                    button {
+                        font-size: 19px;
+                        padding: 0.5rem 2rem;
+                    }
+                }
+                #function{
+                    grid-template-columns: 2rem 1fr 1fr 1fr 2rem;
+                    gap: 2rem;
+                    background:white;
+        box-shadow: none;
+                   
+                   h2{
+                    grid-column-start: 2;
+                    grid-column-end: 2; 
+                    padding: 19.92px 0 0px 0;
+                    text-align: inherit;
+                    margin: 0;
+                    background: inherit;
+                    box-shadow:none;
+                   }
+                   .function-etape{
+                    margin: 0;
+                    padding:  0;
+                   }  
+                    & :nth-child(3){
+                        grid-column-start: 3;
+                    }
+                    & :nth-child(4){
+                        grid-column-start: 4;
+                    }
+
+                    
+                }
+
+
+
+
+        }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    }
+
+
+}
