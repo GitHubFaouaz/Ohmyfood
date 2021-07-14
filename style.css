@@ -152,11 +152,18 @@ header img {
   height: 250px;
   position: relative;
   padding-bottom: 0.3rem;
+  -webkit-box-shadow: 2px 2px 8px #bfb4b4;
+          box-shadow: 2px 2px 8px #bfb4b4;
 }
 
 #sectionRestaurant h2 {
   -ms-grid-column: 2;
       grid-column-start: 2;
+}
+
+#sectionRestaurant a {
+  text-decoration: none;
+  color: inherit;
 }
 
 #sectionRestaurant .class-img-Resto {
@@ -186,17 +193,28 @@ header img {
   margin: 0px 0 0px 15px;
 }
 
+#sectionRestaurant .fas {
+  position: absolute;
+  right: 1.5rem;
+  cursor: pointer;
+  -webkit-transition: background 4s;
+  transition: background 4s;
+}
+
+#sectionRestaurant .fas:hover {
+  background: red;
+}
+
 #sectionRestaurant .far {
   position: absolute;
   right: 1.5rem;
   cursor: pointer;
-  -webkit-transition: background 3s;
-  transition: background 3s;
+  -webkit-transition: background 4s;
+  transition: background 4s;
 }
 
 #sectionRestaurant .far:hover {
-  background: -webkit-gradient(linear, right top, left top, from(#9356DC), to(#FF79DA));
-  background: linear-gradient(to left, #9356DC, #FF79DA);
+  background: red;
 }
 
 footer {
@@ -302,7 +320,7 @@ footer ul li {
 
 @media screen and (min-width: 992px) {
   #bloc-page {
-    max-width: 1550px;
+    max-width: 1750px;
   }
   #sectionReservation {
     -ms-grid-columns: 2fr;

@@ -1,0 +1,143 @@
+body {
+  background: red;
+}
+
+#bloc-page {
+  max-width: 768px;
+  background: yellow;
+}
+
+header {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 40px 1fr 40px;
+      grid-template-columns: 40px 1fr 40px;
+  -ms-grid-rows: 55px 1fr;
+      grid-template-rows: 55px 1fr;
+}
+
+header div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: green;
+}
+
+header div h1 {
+  margin: 0;
+}
+
+header #img-photo {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 250px;
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 4;
+  -ms-grid-row: 2;
+      grid-row-start: 2;
+  width: 100%;
+}
+
+main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 40px 1fr 40px;
+      grid-template-columns: 40px 1fr 40px;
+  -ms-grid-rows: 4rem 1fr 1fr 1fr 0.5fr;
+      grid-template-rows: 4rem 1fr 1fr 1fr 0.5fr;
+  background: #f2f4f4;
+  border-radius: 2rem 2rem 0 0;
+  position: relative;
+  top: -2rem;
+}
+
+main h2 {
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+}
+
+.entrees {
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+}
+
+.entrees h3 {
+  width: 2.5rem;
+  border-bottom: 3px solid #99E2D0;
+  padding-bottom: 0.5rem;
+}
+
+.entrees div {
+  border-radius: 1rem;
+  background: white;
+  margin-bottom: 1rem;
+}
+
+.entrees div :nth-child(1) {
+  padding: 1rem 0 0.5rem 0.5rem;
+  margin: 0;
+}
+
+.entrees div :nth-child(2) {
+  padding: 0rem 0 1rem 1rem;
+  margin: 0;
+}
+
+.plats {
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+}
+
+.plats h3 {
+  width: 2.5rem;
+  border-bottom: 3px solid #99E2D0;
+  padding-bottom: 0.5rem;
+}
+
+.plats div {
+  border-radius: 1rem;
+  background: white;
+  margin-bottom: 1rem;
+}
+
+.plats div :nth-child(1) {
+  padding: 1rem 0 0.5rem 0.5rem;
+  margin: 0;
+}
+
+.plats div :nth-child(2) {
+  padding: 0rem 0 1rem 1rem;
+  margin: 0;
+}
+
+.desserts {
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+}
+
+.desserts h3 {
+  width: 2.5rem;
+  border-bottom: 3px solid #99E2D0;
+  padding-bottom: 0.5rem;
+}
+
+.desserts div {
+  border-radius: 1rem;
+  background: white;
+  margin-bottom: 1rem;
+}
+
+.desserts div :nth-child(1) {
+  padding: 1rem 0 0.5rem 0.5rem;
+  margin: 0;
+}
+
+.desserts div :nth-child(2) {
+  padding: 0rem 0 1rem 1rem;
+  margin: 0;
+}
+/*# sourceMappingURL=style1.css.map */

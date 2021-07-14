@@ -1,0 +1,88 @@
+@import"../utils/variable.scss";
+@import"../utils/mixin.scss";
+body{
+    background:red;
+}
+#bloc-page{
+    max-width: 768px;
+    background: yellow;
+}
+header{
+    display: grid;
+    grid-template-columns: 40px 1fr 40px;
+    grid-template-rows: 55px 1fr; 
+   div{
+       display: flex;
+       justify-content: center;
+       background: green;
+     
+       
+      h1{
+            margin: 0;
+        
+      }
+   }
+   #img-photo{
+    object-fit: cover;
+    height: 250px;
+    grid-column-start: 1;
+    grid-column-end: 4;     
+    grid-row-start: 2;
+    width: 100%;
+   
+   }
+
+}
+
+main{
+    display: grid;
+    grid-template-columns: 40px 1fr 40px;
+    grid-template-rows: 4rem 1fr 1fr 1fr 0.5fr; 
+    background: #f2f4f4;
+    border-radius: 2rem 2rem 0 0;
+    position: relative;
+    top: -2rem;
+    
+    h2{
+        grid-column-start: 2;
+        
+    }
+}
+    .entrees{
+        grid-column-start: 2;
+        h3{
+           width: 2.5rem; 
+           border-bottom: 3px solid $Tertiaire;
+           padding-bottom: 0.5rem;
+           
+        }
+        div{
+           @include div-des-sectionsPages; 
+        }
+        
+    }
+    .plats{
+        grid-column-start: 2;
+        h3{
+            width: 2.5rem; 
+            border-bottom: 3px solid $Tertiaire;
+            padding-bottom: 0.5rem;
+            
+        }
+        div{
+            @include div-des-sectionsPages; 
+         }
+    }
+    .desserts{
+        grid-column-start: 2;
+        h3{
+            width: 2.5rem; 
+            border-bottom: 3px solid $Tertiaire;
+            padding-bottom: 0.5rem;
+            
+         }
+         div{
+            @include div-des-sectionsPages; 
+         }
+    }
+
