@@ -3,6 +3,8 @@
   src: url("../fonts/roboto/Roboto-Regular.ttf");
 }
 
+/*page principale*/
+/*fin page principale*/
 body {
   margin: 0;
 }
@@ -118,8 +120,8 @@ header img {
 #function .function-etape {
   padding: 1rem 0;
   border-radius: 1.5rem;
-  -webkit-box-shadow: 2px 2px 8px #bfb4b4;
-          box-shadow: 2px 2px 8px #bfb4b4;
+  -webkit-box-shadow: 2px 2px 3px #bfb4b4;
+          box-shadow: 2px 2px 3px #bfb4b4;
   font-weight: bold;
 }
 
@@ -152,8 +154,8 @@ header img {
   height: 250px;
   position: relative;
   padding-bottom: 0.3rem;
-  -webkit-box-shadow: 2px 2px 8px #bfb4b4;
-          box-shadow: 2px 2px 8px #bfb4b4;
+  -webkit-box-shadow: 2px 2px 3px #bfb4b4;
+          box-shadow: 2px 2px 3px #bfb4b4;
 }
 
 #sectionRestaurant h2 {
@@ -219,7 +221,7 @@ header img {
 
 footer {
   color: white;
-  padding-left: 40px;
+  padding: 0 0 5px 40px;
   background: #373535;
 }
 
