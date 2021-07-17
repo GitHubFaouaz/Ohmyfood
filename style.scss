@@ -1,7 +1,10 @@
-@import "utils/responsive.scss";
-@import "utils/variable.scss";
-@import "utils/fonts.scss";
-@import "utils/mixin.scss";
+@import "./utils/_variable";
+@import "./utils/_fonts";
+@import "./utils/_mixin";
+@import"./utils/placeholders";
+@import "./utils/_responsive";
+
+
 body{
    
     margin: 0;
@@ -42,6 +45,7 @@ header{
            
             margin: 0 65px 0 0 ;
             padding: 20px 0;
+            font-weight: bold;
             
         }
         .fas{
@@ -54,7 +58,7 @@ header{
 
 
     #reservation--search{
-        background:$grid;
+        background:$gris;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -68,7 +72,7 @@ header{
             font-size: 1.2rem;
         }
             
-        }
+        
         button{
             padding: 1rem;
             border-radius: 2rem;
@@ -77,22 +81,34 @@ header{
             border: 0;
             font-size: 16px;
             margin-bottom: 3.5rem ;
+            box-shadow: $box-shadow-Element;
+            transition: color, 1s;
+            cursor: pointer;
+            &:hover{
+                color:black;
+                font-size: 17px;
+               
+            }
         }
     }
+    
 
     #function{
     
        
         display: grid;
         grid-template-columns: 40px 1fr 40px; /*pour les colonne*/
-        grid-template-rows:1fr 1fr 1fr 1fr ;
+        grid-template-rows:1fr 1fr 1fr 1fr;
         div{
             grid-column-start: 2;
-            background: $grid;
+            background: $gris;
             margin-bottom: 2rem;
             border-radius: 1rem;
             display: flex;
             align-items: center;
+            &:hover{
+                background: #9356dc59;
+            }
             
         }
         h2{
@@ -104,7 +120,7 @@ header{
     
           padding: 1rem 0;
           border-radius: 1.5rem;
-          box-shadow: 2px 2px 3px $gris-shadow ;
+          box-shadow: $box-shadow-Element;
           font-weight: bold;
         }
         .function-number{
@@ -121,84 +137,97 @@ header{
        
     }
 
-   
-    #sectionRestaurant{
-       display: grid;
-       grid-template-columns: 40px 1fr 40px;
-       background: $grid;
+}   
+#sectionRestaurant{
+    display: grid;
+    grid-template-columns: 40px 1fr 40px;
+    background:$gris;
 
-        div{
-            margin-bottom:2rem ;
-            background: white;
-            grid-column-start: 2;
-            border-radius: 1.5rem;
-            height: 250px;
-            position: relative;
-            padding-bottom: 0.3rem;
-            box-shadow: 2px 2px 3px $gris-shadow ;
-        }
-        h2{
-            grid-column-start: 2;
-        }
-        a{
-            text-decoration: none;
-            color: inherit;
-        }
-        .class-img-Resto{
-            width:100% ;
-            height: 175px;
-            object-fit: cover;
-            border-radius: 1.5rem 1.5rem 0 0;
-            position: relative;
-        }
-        span{
-            color: #20887e;
-            position: absolute;
-            right: 10px;
-            top: 17px;
-            background: $Tertiaire;
-            padding: 4px 7px;
-        }
-         
-
-        h3 {
-            margin: 15px 0 8px 15px;
-            position: relative;
-        }
-        p{
-            margin:0px 0 0px 15px;
-        }
-        .fas{
-            position: absolute;
-            right: 1.5rem;
-            cursor: pointer;
-            transition:background 4s;
-            &:hover{
-               
-                background:red;
-            }
-               
-        }
-        .far{
-            position: absolute;
-            right: 1.5rem;
-            cursor: pointer;
-            transition:background 4s;
-            &:hover{
-               
-                background:red;
-                
-               
-            }
-        } 
-        
-}
-
-    footer{
-       @include footer;
+     div{
+         margin-bottom:2rem ;
+         background: white;
+         grid-column-start: 2;
+         border-radius: 1.5rem;
+         height: 250px;
+         position: relative;
+         padding-bottom: 0.3rem;
+         box-shadow: $box-shadow-Element;
+         transition: transform 500ms;
+         &:hover{
+             transform: scale(1.02);
+         }
+     }
+     h2{
+        grid-column-start: 2;
+        margin-top: 3rem;
     }
+    a{
+        text-decoration: none;
+        color: inherit;
+    }
+    .class-img-Resto{
+        width:100% ;
+        height: 175px;
+        object-fit: cover;
+        border-radius: 1.5rem 1.5rem 0 0;
+        position: relative;
+    }
+    span{
+        color: #20887e;
+        position: absolute;
+        right: 10px;
+        top: 17px;
+        background: $Tertiaire;
+        padding: 4px 7px;
+    }
+    h3 {
+        margin: 15px 0 8px 15px;
+        position: relative;
+    }
+    p{
+        margin:0px 0 0px 15px;
+    }
+    .fas{
+        position: absolute;
+        right: 1.5rem;
+        cursor: pointer;
+        transition:background 4s;
+        &:hover{
+           
+            background:red;
+        }
+           
+    }
+    .far{
+        position: absolute;
+        right: 1.5rem;
+        cursor: pointer;
+        transition:background 4s;
+        &:hover{
+           
+            background:red;
+            
+           
+        }
+    } 
     
-    @include tablette;
-    @include desktop;
+}
+footer{
+    @extend %footer;
+ }
+ @include tablette;
+ @include desktop;
 
-    /*./dart-sass/sass sass/style.scss style.css --watch*/
+ 
+
+
+
+
+
+
+
+
+
+
+
+   

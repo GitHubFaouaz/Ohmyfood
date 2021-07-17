@@ -1,0 +1,13 @@
+@mixin desktopMenu { 
+    @media screen and (min-width:992px) {
+        main{
+            margin: auto;
+            max-width: 1200px;
+            box-shadow: 0px -5px 11px #bfb4b4;
+        }
+     footer{
+        margin-top: -2rem;
+     }   
+    }
+    
+}

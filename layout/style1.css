@@ -1,0 +1,206 @@
+@font-face {
+  font-family: 'Roboto-Regular';
+  src: url("../fonts/roboto/Roboto-Regular.ttf");
+}
+
+@font-face {
+  font-family: 'shrikhand',sans-serif;
+  src: url("../fonts/shrikhand/shrikhand.ttf");
+}
+
+/*page principale*/
+footer {
+  color: white;
+  padding: 0 0 5px 40px;
+  background: #373535;
+}
+
+footer img {
+  width: 6rem;
+  height: 1rem;
+  padding: 1.7rem 0 1rem 0;
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+}
+
+footer ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+footer ul li {
+  margin-bottom: 0.5rem;
+}
+
+footer a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/*fin page principale*/
+.entrees h3, .plats h3, .desserts h3 {
+  width: 2.5rem;
+  border-bottom: 3px solid #99E2D0;
+  padding-bottom: 0.5rem;
+}
+
+.entrees div, .plats div, .desserts div {
+  border-radius: 1rem;
+  background: white;
+  margin-bottom: 1rem;
+  -webkit-box-shadow: 2px 2px 3px #bfb4b4;
+          box-shadow: 2px 2px 3px #bfb4b4;
+  cursor: pointer;
+}
+
+.entrees div :nth-child(1), .plats div :nth-child(1), .desserts div :nth-child(1) {
+  margin: 0;
+  padding: 0.8rem 0rem 0 1rem;
+}
+
+.entrees div :nth-child(1) strong, .plats div :nth-child(1) strong, .desserts div :nth-child(1) strong {
+  padding: 0;
+}
+
+.entrees div :nth-child(2), .plats div :nth-child(2), .desserts div :nth-child(2) {
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.5rem 0rem 1rem 1rem;
+}
+
+.entrees div :nth-child(2) span, .plats div :nth-child(2) span, .desserts div :nth-child(2) span {
+  padding: 0;
+}
+
+.entrees div :nth-child(2) .prix, .plats div :nth-child(2) .prix, .desserts div :nth-child(2) .prix {
+  padding-right: 1rem;
+  font-weight: bold;
+}
+
+.btn-commander {
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+  text-align: center;
+}
+
+.btn-commander button {
+  padding: 1rem 3.5rem;
+  border-radius: 2rem;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #9356DC), to(#FF79DA));
+  background-image: linear-gradient(#9356DC 10%, #FF79DA 100%);
+  border: 0;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  -webkit-box-shadow: 2px 2px 3px #bfb4b4;
+          box-shadow: 2px 2px 3px #bfb4b4;
+  margin-top: 1.5rem;
+  -webkit-transition: -webkit-transform 400ms;
+  transition: -webkit-transform 400ms;
+  transition: transform 400ms;
+  transition: transform 400ms, -webkit-transform 400ms;
+}
+
+.btn-commander button:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+  font-size: 18px;
+}
+
+* {
+  font-family: "Roboto-Regular";
+}
+
+body {
+  background: #f2f2f2;
+  margin: 0;
+}
+
+header div h1 {
+  margin: 0;
+  text-align: center;
+  padding-top: 0.5rem;
+}
+
+header div a {
+  position: absolute;
+  top: 1rem;
+  left: 3rem;
+  color: inherit;
+}
+
+header #img-photo {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 350px;
+  width: 100%;
+}
+
+main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 40px 1fr 40px;
+      grid-template-columns: 40px 1fr 40px;
+  -ms-grid-rows: 4rem 1fr 1fr 1fr 6rem;
+      grid-template-rows: 4rem 1fr 1fr 1fr 6rem;
+  background: #f2f2f2;
+  border-radius: 2rem 2rem 0 0;
+  position: relative;
+  top: -2rem;
+}
+
+main h2 {
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main h2 span {
+  font-family: "shrikhand",sans-serif;
+}
+
+main h2 i {
+  padding-right: 1rem;
+}
+
+.entrees {
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+}
+
+.plats {
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+}
+
+.desserts {
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+}
+
+@media screen and (min-width: 992px) {
+  main {
+    margin: auto;
+    max-width: 1200px;
+    -webkit-box-shadow: 0px -5px 11px #bfb4b4;
+            box-shadow: 0px -5px 11px #bfb4b4;
+  }
+  footer {
+    margin-top: -2rem;
+  }
+}
+/*# sourceMappingURL=style1.css.map */

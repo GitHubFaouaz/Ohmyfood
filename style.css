@@ -3,7 +3,41 @@
   src: url("../fonts/roboto/Roboto-Regular.ttf");
 }
 
+@font-face {
+  font-family: 'shrikhand',sans-serif;
+  src: url("../fonts/shrikhand/shrikhand.ttf");
+}
+
 /*page principale*/
+footer {
+  color: white;
+  padding: 0 0 5px 40px;
+  background: #373535;
+}
+
+footer img {
+  width: 6rem;
+  height: 1rem;
+  padding: 1.7rem 0 1rem 0;
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+}
+
+footer ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+footer ul li {
+  margin-bottom: 0.5rem;
+}
+
+footer a {
+  text-decoration: none;
+  color: inherit;
+}
+
 /*fin page principale*/
 body {
   margin: 0;
@@ -46,6 +80,7 @@ header img {
   text-align: center;
   margin: 0 65px 0 0;
   padding: 20px 0;
+  font-weight: bold;
 }
 
 #sectionReservation #reservation--local .fas {
@@ -76,7 +111,7 @@ header img {
   font-size: 1.2rem;
 }
 
-#sectionReservation button {
+#sectionReservation #reservation--search button {
   padding: 1rem;
   border-radius: 2rem;
   background-image: -webkit-gradient(linear, right top, left top, from(#9356DC), to(#FF79DA));
@@ -85,9 +120,19 @@ header img {
   border: 0;
   font-size: 16px;
   margin-bottom: 3.5rem;
+  -webkit-box-shadow: 2px 2px 3px #bfb4b4;
+          box-shadow: 2px 2px 3px #bfb4b4;
+  -webkit-transition: color, 1s;
+  transition: color, 1s;
+  cursor: pointer;
 }
 
-#function {
+#sectionReservation #reservation--search button:hover {
+  color: black;
+  font-size: 17px;
+}
+
+#sectionReservation #function {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 40px 1fr 40px;
@@ -97,7 +142,7 @@ header img {
       grid-template-rows: 1fr 1fr 1fr 1fr;
 }
 
-#function div {
+#sectionReservation #function div {
   -ms-grid-column: 2;
       grid-column-start: 2;
   background: #f2f2f2;
@@ -111,13 +156,17 @@ header img {
           align-items: center;
 }
 
-#function h2 {
+#sectionReservation #function div:hover {
+  background: #9356dc59;
+}
+
+#sectionReservation #function h2 {
   -ms-grid-column: 2;
       grid-column-start: 2;
   margin: 53px 0 0 0;
 }
 
-#function .function-etape {
+#sectionReservation #function .function-etape {
   padding: 1rem 0;
   border-radius: 1.5rem;
   -webkit-box-shadow: 2px 2px 3px #bfb4b4;
@@ -125,7 +174,7 @@ header img {
   font-weight: bold;
 }
 
-#function .function-number {
+#sectionReservation #function .function-number {
   padding: 4px 8px;
   background: #9356DC;
   border-radius: 50%;
@@ -133,7 +182,7 @@ header img {
   color: white;
 }
 
-#function .fas {
+#sectionReservation #function .fas {
   margin: 15px;
 }
 
@@ -156,11 +205,21 @@ header img {
   padding-bottom: 0.3rem;
   -webkit-box-shadow: 2px 2px 3px #bfb4b4;
           box-shadow: 2px 2px 3px #bfb4b4;
+  -webkit-transition: -webkit-transform 500ms;
+  transition: -webkit-transform 500ms;
+  transition: transform 500ms;
+  transition: transform 500ms, -webkit-transform 500ms;
+}
+
+#sectionRestaurant div:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
 }
 
 #sectionRestaurant h2 {
   -ms-grid-column: 2;
       grid-column-start: 2;
+  margin-top: 3rem;
 }
 
 #sectionRestaurant a {
@@ -219,28 +278,6 @@ header img {
   background: red;
 }
 
-footer {
-  color: white;
-  padding: 0 0 5px 40px;
-  background: #373535;
-}
-
-footer img {
-  width: 5rem;
-  height: 1rem;
-  padding: 1.7rem 0 1rem 0;
-}
-
-footer ul {
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
-}
-
-footer ul li {
-  margin-bottom: 0.5rem;
-}
-
 @media screen and (min-width: 769px) {
   #bloc-page {
     max-width: 991px;
@@ -273,9 +310,6 @@ footer ul li {
     margin-bottom: 3rem;
     text-align: center;
     font-size: 1.3rem;
-  }
-  #sectionReservation #reservation--search button {
-    font-size: 25px;
   }
   #sectionReservation #function {
     -ms-grid-rows: 0fr;
@@ -322,7 +356,7 @@ footer ul li {
 
 @media screen and (min-width: 992px) {
   #bloc-page {
-    max-width: 1750px;
+    max-width: 1950px;
   }
   #sectionReservation {
     -ms-grid-columns: 2fr;
@@ -332,8 +366,11 @@ footer ul li {
   }
   #sectionReservation #reservation--local p {
     margin: 0;
-    font-weight: bold;
     font-size: 20px;
+  }
+  #sectionReservation #reservation--search {
+    -webkit-transition: color 2s;
+    transition: color 2s;
   }
   #sectionReservation #reservation--search h2 {
     margin: 2rem 0;
@@ -343,7 +380,11 @@ footer ul li {
   }
   #sectionReservation #reservation--search button {
     font-size: 19px;
-    padding: 0.5rem 2rem;
+    padding: 1rem 2rem;
+  }
+  #sectionReservation #reservation--search button:hover {
+    color: black;
+    font-size: 20px;
   }
   #sectionReservation #function {
     -ms-grid-columns: 2rem 1fr 1fr 1fr 2rem;
@@ -377,6 +418,4 @@ footer ul li {
         grid-column-start: 4;
   }
 }
-
-/*./dart-sass/sass sass/style.scss style.css --watch*/
 /*# sourceMappingURL=style.css.map */
