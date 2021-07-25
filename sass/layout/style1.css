@@ -38,6 +38,90 @@ footer a {
   color: inherit;
 }
 
+@-webkit-keyframes cercle {
+  0% {
+    -webkit-transform: rotate(0deg) scale(1);
+            transform: rotate(0deg) scale(1);
+    border-top-color: #9356DC;
+    border-bottom-color: #9356DC;
+  }
+  50% {
+    -webkit-transform: rotate(180deg) scale(1.25);
+            transform: rotate(180deg) scale(1.25);
+    border-top-color: white;
+    border-bottom-color: white;
+  }
+  100% {
+    -webkit-transform: rotate(360deg) scale(1);
+            transform: rotate(360deg) scale(1);
+    border-top-color: #9356DC;
+    border-bottom-color: #9356DC;
+  }
+}
+
+@keyframes cercle {
+  0% {
+    -webkit-transform: rotate(0deg) scale(1);
+            transform: rotate(0deg) scale(1);
+    border-top-color: #9356DC;
+    border-bottom-color: #9356DC;
+  }
+  50% {
+    -webkit-transform: rotate(180deg) scale(1.25);
+            transform: rotate(180deg) scale(1.25);
+    border-top-color: white;
+    border-bottom-color: white;
+  }
+  100% {
+    -webkit-transform: rotate(360deg) scale(1);
+            transform: rotate(360deg) scale(1);
+    border-top-color: #9356DC;
+    border-bottom-color: #9356DC;
+  }
+}
+
+@-webkit-keyframes flash {
+  0% {
+    color: #BF64DB;
+    text-shadow: 0 0 7px #0c0c0b;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    color: grey;
+    text-shadow: none;
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+  100% {
+    color: #BF64DB;
+    text-shadow: 0 0 7px #f54804;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes flash {
+  0% {
+    color: #BF64DB;
+    text-shadow: 0 0 7px #0c0c0b;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    color: grey;
+    text-shadow: none;
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+  100% {
+    color: #BF64DB;
+    text-shadow: 0 0 7px #f54804;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
 /*fin page principale*/
 .entrees h3, .plats h3, .desserts h3 {
   width: 2.5rem;
@@ -46,6 +130,10 @@ footer a {
 }
 
 .entrees div, .plats div, .desserts div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
   border-radius: 1rem;
   background: white;
   margin-bottom: 1rem;
@@ -56,7 +144,6 @@ footer a {
 
 .entrees div :nth-child(1), .plats div :nth-child(1), .desserts div :nth-child(1) {
   margin: 0;
-  padding: 0.8rem 0rem 0 1rem;
 }
 
 .entrees div :nth-child(1) strong, .plats div :nth-child(1) strong, .desserts div :nth-child(1) strong {
@@ -180,6 +267,42 @@ main h2 i {
 .entrees {
   -ms-grid-column: 2;
       grid-column-start: 2;
+}
+
+.entrees div {
+  position: relative;
+}
+
+.entrees .div-nomDesPlats {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.entrees .div-nomDesPlats:hover + .div-coche {
+  -webkit-transform: translate(-100px, 0%);
+          transform: translate(-100px, 0%);
+}
+
+.entrees .div-nomDesPlats .div-coche {
+  width: 10%;
+  position: absolute;
+  right: -97px;
+  width: 10%;
+  top: 0;
+  /* right: -113px; */
+  height: 100%;
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  left: 100%;
+  -webkit-transition: -webkit-transform 1500ms;
+  transition: -webkit-transform 1500ms;
+  transition: transform 1500ms;
+  transition: transform 1500ms, -webkit-transform 1500ms;
 }
 
 .plats {

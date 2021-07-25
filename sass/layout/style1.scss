@@ -66,13 +66,54 @@ main{
         grid-column-start: 2;
         h3{
             @extend %h3-page-secondaire;
-           
+            
         }    
         div{
-            @extend %div-des-sectionsPages; 
+            @extend %div-des-sectionsPages;
+            position: relative; 
+
         }
         
-    }
+          .div-nomDesPlats{ //btn
+            display: flex;
+            flex-direction: column;
+           
+         
+        
+            &:hover + .div-coche{
+                 transform: translate(-100px, 0%); 
+                 
+                }
+        
+           
+            
+        
+            
+            .div-coche{ //ball
+                width: 10%;
+                //visibility: hidden; 
+               position: absolute;
+               right: -97px;
+               width: 10%;
+               top: 0;
+               /* right: -113px; */
+               height: 100%;
+               transform-origin: right;
+               left: 100%; 
+               transition:transform 1500ms ;
+            }   
+                          
+       }              
+    }          
+         
+        
+            
+          
+        
+        
+       
+        
+       
     .plats{
         grid-column-start: 2;
         h3{

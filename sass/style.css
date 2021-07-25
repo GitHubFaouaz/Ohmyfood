@@ -38,13 +38,183 @@ footer a {
   color: inherit;
 }
 
+body #loader {
+  width: 250px;
+  height: 250px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 5px solid transparent;
+  border-radius: 50%;
+  background: white;
+  -webkit-animation: cercle 3s linear infinite;
+          animation: cercle 3s linear infinite;
+  visibility: hidden;
+}
+
+body #loader .lettre {
+  font-size: 25px;
+  letter-spacing: 15px;
+  -webkit-animation: flash 1.2s linear infinite;
+          animation: flash 1.2s linear infinite;
+}
+
+body #loader :nth-child(1) {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+}
+
+body #loader :nth-child(2) {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+body #loader :nth-child(3) {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+
+body #loader :nth-child(4) {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+body #loader :nth-child(5) {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+body #loader :nth-child(6) {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+
+body #loader :nth-child(7) {
+  -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s;
+}
+
+body #loader :nth-child(8) {
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+
+@-webkit-keyframes cercle {
+  0% {
+    -webkit-transform: rotate(0deg) scale(1);
+            transform: rotate(0deg) scale(1);
+    border-top-color: #9356DC;
+    border-bottom-color: #9356DC;
+  }
+  50% {
+    -webkit-transform: rotate(180deg) scale(1.25);
+            transform: rotate(180deg) scale(1.25);
+    border-top-color: white;
+    border-bottom-color: white;
+  }
+  100% {
+    -webkit-transform: rotate(360deg) scale(1);
+            transform: rotate(360deg) scale(1);
+    border-top-color: #9356DC;
+    border-bottom-color: #9356DC;
+  }
+}
+
+@keyframes cercle {
+  0% {
+    -webkit-transform: rotate(0deg) scale(1);
+            transform: rotate(0deg) scale(1);
+    border-top-color: #9356DC;
+    border-bottom-color: #9356DC;
+  }
+  50% {
+    -webkit-transform: rotate(180deg) scale(1.25);
+            transform: rotate(180deg) scale(1.25);
+    border-top-color: white;
+    border-bottom-color: white;
+  }
+  100% {
+    -webkit-transform: rotate(360deg) scale(1);
+            transform: rotate(360deg) scale(1);
+    border-top-color: #9356DC;
+    border-bottom-color: #9356DC;
+  }
+}
+
+@-webkit-keyframes flash {
+  0% {
+    color: #BF64DB;
+    text-shadow: 0 0 7px #0c0c0b;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    color: grey;
+    text-shadow: none;
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+  100% {
+    color: #BF64DB;
+    text-shadow: 0 0 7px #f54804;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes flash {
+  0% {
+    color: #BF64DB;
+    text-shadow: 0 0 7px #0c0c0b;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    color: grey;
+    text-shadow: none;
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+  100% {
+    color: #BF64DB;
+    text-shadow: 0 0 7px #f54804;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
 /*fin page principale*/
 body {
   margin: 0;
+  position: relative;
 }
 
 * {
   font-family: "Roboto-Regular";
+}
+
+#div-loader {
+  position: fixed;
+  height: 100%;
+  background: white;
+  width: 100%;
+  z-index: 999;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  visibility: hidden;
 }
 
 #bloc-page {
@@ -254,28 +424,25 @@ header img {
   margin: 0px 0 0px 15px;
 }
 
-#sectionRestaurant .fas {
-  position: absolute;
-  right: 1.5rem;
-  cursor: pointer;
-  -webkit-transition: background 4s;
-  transition: background 4s;
-}
-
-#sectionRestaurant .fas:hover {
-  background: red;
-}
-
 #sectionRestaurant .far {
   position: absolute;
   right: 1.5rem;
   cursor: pointer;
-  -webkit-transition: background 4s;
-  transition: background 4s;
+  font-size: 28px;
 }
 
-#sectionRestaurant .far:hover {
-  background: red;
+#sectionRestaurant .fas {
+  position: absolute;
+  right: 1.5rem;
+  cursor: pointer;
+  color: transparent;
+  -webkit-transition: color 1s;
+  transition: color 1s;
+  font-size: 28px;
+}
+
+#sectionRestaurant .fas:hover {
+  color: #BF64DB;
 }
 
 @media screen and (min-width: 769px) {

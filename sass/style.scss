@@ -1,23 +1,40 @@
-@import "./utils/_variable";
-@import "./utils/_fonts";
-@import "./utils/_mixin";
-@import"./utils/placeholders";
-@import "./utils/_responsive";
+@import "../sass/utils/variable";
+@import "../sass/utils/fonts";
+@import"../sass/utils/placeholders";
+@import "../sass/utils/_responsive";
 
 
 body{
    
     margin: 0;
-    
+    position: relative;
+    @extend %animation;
             
 }
 *{
     font-family: "Roboto-Regular";
 }
+#div-loader{
+    position: fixed;
+      height: 100%;
+      background: white;
+      width: 100%;
+      z-index: 999;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      visibility: hidden;
+      
+}
 #bloc-page{
 
 margin: auto; 
 max-width: 768px;
+
+   
+    
+//visibility: hidden;
+
 
 }
 header{
@@ -187,29 +204,33 @@ header{
     p{
         margin:0px 0 0px 15px;
     }
-    .fas{
-        position: absolute;
-        right: 1.5rem;
-        cursor: pointer;
-        transition:background 4s;
-        &:hover{
-           
-            background:red;
-        }
-           
-    }
     .far{
         position: absolute;
         right: 1.5rem;
         cursor: pointer;
-        transition:background 4s;
-        &:hover{
-           
-            background:red;
-            
-           
-        }
+        font-size: 28px;
     } 
+    .fas{//coeur invisible
+        position: absolute;
+        right: 1.5rem;
+        cursor: pointer;
+        color: transparent;
+        
+        transition:color 1s;
+        font-size: 28px;
+        
+        &:hover{
+            
+            color: $gradiant ;
+            
+        }
+         
+        
+        
+        
+           
+    }
+   
     
 }
 footer{
