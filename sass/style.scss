@@ -8,7 +8,7 @@ body{
    
     margin: 0;
     position: relative;
-    @extend %animation;
+   
             
 }
 *{
@@ -16,14 +16,28 @@ body{
 }
 #div-loader{
     position: fixed;
+      
+      top: 0;
+     right: 0;
+     bottom: 0;
       height: 100%;
-      background: white;
       width: 100%;
       z-index: 999;
+      background: white;
       display: flex;
       justify-content: center;
       align-items: center;
-      visibility: hidden;
+      
+      animation:vanish 0s ;
+      animation-fill-mode: both;//  indique la façon dont une animation CSS doit appliquer les styles à sa cible avant et après son exécution.
+      @extend %animation;
+     
+      
+      
+      
+     
+      
+      
       
 }
 #bloc-page{
@@ -33,7 +47,7 @@ max-width: 768px;
 
    
     
-//visibility: hidden;
+
 
 
 }
@@ -209,22 +223,31 @@ header{
         right: 1.5rem;
         cursor: pointer;
         font-size: 28px;
+        
+         
+       
+       
     } 
     .fas{//coeur invisible
         position: absolute;
         right: 1.5rem;
         cursor: pointer;
-        color: transparent;
-        
-        transition:color 1s;
+        color:transparent;
         font-size: 28px;
+        transition:background 3s;
         
         &:hover{
             
-            color: $gradiant ;
+            
+            background:linear-gradient(to left,$Primaire,$Secondaire); 
+            -webkit-background-clip: text;
+            
             
         }
-         
+        
+     
+        
+       
         
         
         

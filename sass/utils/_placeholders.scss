@@ -8,7 +8,7 @@
         width: 6rem;
         height: 1rem;
         padding: 1.7rem 0 1rem 0;
-        filter: invert(100%);
+        filter: invert(100%);// permet d'appliquer des filtres et d'obtenir des effets graphiques de flou, de saturation, etc. Les filtres sont généralement utilisés pour ajuster le rendu d'une image, d'un arrière-plan ou des bordures.
         
     }  
     ul{
@@ -30,7 +30,7 @@
 
 
 %animation{
-  
+
 
   #loader{
      
@@ -44,8 +44,7 @@
       border-radius: 50%;
       background: white;
       animation: cercle 3s linear infinite;
-      visibility: hidden;
-
+      
 
        .lettre{
            
@@ -91,6 +90,8 @@
         transform: rotate(360deg) scale(1);
         border-top-color:#9356DC;
         border-bottom-color:#9356DC;
+        
+        
        
       }
       }
@@ -112,7 +113,27 @@
               color:$gradiant;
               text-shadow: 0 0 7px rgb(245, 72, 4); 
               transform:  scale(1);
+             
+              
           }
+      }
+      @keyframes vanish {
+        
+      0%{
+        opacity: 0.7;
+        
+      }
+     
+      
+      80%{
+        opacity: 0.5;
+      }
+      100%{
+        opacity: 0;
+        z-index: -10;//pour passe en dessous de body
+        
+      }
+        
       }
   }
 //fin loader

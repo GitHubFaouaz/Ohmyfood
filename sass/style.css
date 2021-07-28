@@ -38,7 +38,7 @@ footer a {
   color: inherit;
 }
 
-body #loader {
+#div-loader #loader {
   width: 250px;
   height: 250px;
   display: -webkit-box;
@@ -55,52 +55,51 @@ body #loader {
   background: white;
   -webkit-animation: cercle 3s linear infinite;
           animation: cercle 3s linear infinite;
-  visibility: hidden;
 }
 
-body #loader .lettre {
+#div-loader #loader .lettre {
   font-size: 25px;
   letter-spacing: 15px;
   -webkit-animation: flash 1.2s linear infinite;
           animation: flash 1.2s linear infinite;
 }
 
-body #loader :nth-child(1) {
+#div-loader #loader :nth-child(1) {
   -webkit-animation-delay: 0.1s;
           animation-delay: 0.1s;
 }
 
-body #loader :nth-child(2) {
+#div-loader #loader :nth-child(2) {
   -webkit-animation-delay: 0.2s;
           animation-delay: 0.2s;
 }
 
-body #loader :nth-child(3) {
+#div-loader #loader :nth-child(3) {
   -webkit-animation-delay: 0.3s;
           animation-delay: 0.3s;
 }
 
-body #loader :nth-child(4) {
+#div-loader #loader :nth-child(4) {
   -webkit-animation-delay: 0.4s;
           animation-delay: 0.4s;
 }
 
-body #loader :nth-child(5) {
+#div-loader #loader :nth-child(5) {
   -webkit-animation-delay: 0.5s;
           animation-delay: 0.5s;
 }
 
-body #loader :nth-child(6) {
+#div-loader #loader :nth-child(6) {
   -webkit-animation-delay: 0.6s;
           animation-delay: 0.6s;
 }
 
-body #loader :nth-child(7) {
+#div-loader #loader :nth-child(7) {
   -webkit-animation-delay: 0.7s;
           animation-delay: 0.7s;
 }
 
-body #loader :nth-child(8) {
+#div-loader #loader :nth-child(8) {
   -webkit-animation-delay: 0.8s;
           animation-delay: 0.8s;
 }
@@ -189,6 +188,32 @@ body #loader :nth-child(8) {
   }
 }
 
+@-webkit-keyframes vanish {
+  0% {
+    opacity: 0.7;
+  }
+  80% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+    z-index: -10;
+  }
+}
+
+@keyframes vanish {
+  0% {
+    opacity: 0.7;
+  }
+  80% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+    z-index: -10;
+  }
+}
+
 /*fin page principale*/
 body {
   margin: 0;
@@ -201,10 +226,13 @@ body {
 
 #div-loader {
   position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
   height: 100%;
-  background: white;
   width: 100%;
   z-index: 999;
+  background: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -214,7 +242,10 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  visibility: hidden;
+  -webkit-animation: vanish 0s;
+          animation: vanish 0s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
 }
 
 #bloc-page {
@@ -436,13 +467,15 @@ header img {
   right: 1.5rem;
   cursor: pointer;
   color: transparent;
-  -webkit-transition: color 1s;
-  transition: color 1s;
   font-size: 28px;
+  -webkit-transition: background 3s;
+  transition: background 3s;
 }
 
 #sectionRestaurant .fas:hover {
-  color: #BF64DB;
+  background: -webkit-gradient(linear, right top, left top, from(#9356DC), to(#FF79DA));
+  background: linear-gradient(to left, #9356DC, #FF79DA);
+  -webkit-background-clip: text;
 }
 
 @media screen and (min-width: 769px) {
