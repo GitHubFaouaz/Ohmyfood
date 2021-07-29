@@ -38,6 +38,7 @@ footer a {
   color: inherit;
 }
 
+/*fin page principale*/
 #div-loader #loader {
   width: 250px;
   height: 250px;
@@ -149,19 +150,18 @@ footer a {
 @-webkit-keyframes flash {
   0% {
     color: #BF64DB;
-    text-shadow: 0 0 7px #0c0c0b;
+    text-shadow: 0px 0px 7px #9356DC;
     -webkit-transform: scale(1);
             transform: scale(1);
   }
   50% {
     color: grey;
-    text-shadow: none;
-    -webkit-transform: scale(1.05);
-            transform: scale(1.05);
+    -webkit-transform: scale(1.25);
+            transform: scale(1.25);
   }
   100% {
     color: #BF64DB;
-    text-shadow: 0 0 7px #f54804;
+    text-shadow: 0px 0px 7px red;
     -webkit-transform: scale(1);
             transform: scale(1);
   }
@@ -170,19 +170,18 @@ footer a {
 @keyframes flash {
   0% {
     color: #BF64DB;
-    text-shadow: 0 0 7px #0c0c0b;
+    text-shadow: 0px 0px 7px #9356DC;
     -webkit-transform: scale(1);
             transform: scale(1);
   }
   50% {
     color: grey;
-    text-shadow: none;
-    -webkit-transform: scale(1.05);
-            transform: scale(1.05);
+    -webkit-transform: scale(1.25);
+            transform: scale(1.25);
   }
   100% {
     color: #BF64DB;
-    text-shadow: 0 0 7px #f54804;
+    text-shadow: 0px 0px 7px red;
     -webkit-transform: scale(1);
             transform: scale(1);
   }
@@ -214,7 +213,30 @@ footer a {
   }
 }
 
-/*fin page principale*/
+#sectionRestaurant h3 .far {
+  position: absolute;
+  right: 1.5rem;
+  cursor: pointer;
+  font-size: 28px;
+}
+
+#sectionRestaurant h3 .fas {
+  position: absolute;
+  right: 1.5rem;
+  cursor: pointer;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(80%, #9356DC), color-stop(20%, #FF79DA));
+  -webkit-background-clip: text;
+  opacity: 0;
+  font-size: 28px;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+  color: transparent;
+}
+
+#sectionRestaurant h3 .fas:hover {
+  opacity: 1;
+}
+
 body {
   margin: 0;
   position: relative;
@@ -453,29 +475,6 @@ header img {
 
 #sectionRestaurant p {
   margin: 0px 0 0px 15px;
-}
-
-#sectionRestaurant .far {
-  position: absolute;
-  right: 1.5rem;
-  cursor: pointer;
-  font-size: 28px;
-}
-
-#sectionRestaurant .fas {
-  position: absolute;
-  right: 1.5rem;
-  cursor: pointer;
-  color: transparent;
-  font-size: 28px;
-  -webkit-transition: background 3s;
-  transition: background 3s;
-}
-
-#sectionRestaurant .fas:hover {
-  background: -webkit-gradient(linear, right top, left top, from(#9356DC), to(#FF79DA));
-  background: linear-gradient(to left, #9356DC, #FF79DA);
-  -webkit-background-clip: text;
 }
 
 @media screen and (min-width: 769px) {

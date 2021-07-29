@@ -2,6 +2,7 @@
 @import "../sass/utils/fonts";
 @import"../sass/utils/placeholders";
 @import "../sass/utils/_responsive";
+@import"../sass/utils/_animation.scss";
 
 
 body{
@@ -28,9 +29,9 @@ body{
       justify-content: center;
       align-items: center;
       
-      animation:vanish 0s ;
+      animation:vanish 0s ; //loading-spinner
       animation-fill-mode: both;//  indique la façon dont une animation CSS doit appliquer les styles à sa cible avant et après son exécution.
-      @extend %animation;
+      @extend %animation-loading-spinner;
      
       
       
@@ -214,46 +215,12 @@ header{
     h3 {
         margin: 15px 0 8px 15px;
         position: relative;
+         @extend %animationCoeur;
+
     }
     p{
         margin:0px 0 0px 15px;
     }
-    .far{
-        position: absolute;
-        right: 1.5rem;
-        cursor: pointer;
-        font-size: 28px;
-        
-         
-       
-       
-    } 
-    .fas{//coeur invisible
-        position: absolute;
-        right: 1.5rem;
-        cursor: pointer;
-        color:transparent;
-        font-size: 28px;
-        transition:background 3s;
-        
-        &:hover{
-            
-            
-            background:linear-gradient(to left,$Primaire,$Secondaire); 
-            -webkit-background-clip: text;
-            
-            
-        }
-        
-     
-        
-       
-        
-        
-        
-           
-    }
-   
     
 }
 footer{

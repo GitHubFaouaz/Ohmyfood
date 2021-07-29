@@ -1,13 +1,15 @@
 @import"../utils/_variable";
 @import "../utils/_fonts";
-@import "../utils/placeholders";
-@import"./_responsive-page-secondaire.scss";
+@import "../utils/_placeholders";
+@import"./_responsive-page-secondaire";
+@import"../utils/_animation";
 *{
     font-family: "Roboto-Regular";
 }
 body{
     background: $gris;
     margin: 0;
+   
 }
 
 header{
@@ -55,56 +57,75 @@ main{
         span{
             font-family:"shrikhand",sans-serif;
         }
-        i{
-            padding-right: 1rem;
-        }
+       
+       @extend%animationCoeur-pagesSecondaire;
     }
    
 
 }
-    .entrees{
+    .entrees{ //section entrees
         grid-column-start: 2;
+        
         h3{
             @extend %h3-page-secondaire;
             
-        }    
+        } 
+       #grand-div-entrees{
+        display: flex;
+        flex-direction: column;
+        animation:animation-defilement-menu 3s cubic-bezier(.66,.25,.31,.89); 
+        
+       }    
+            
         div{
-            @extend %div-des-sectionsPages;
-            position: relative; 
-
+            @extend %div-des-sectionsPages;// entrees plats desserts
+            //placeholder
         }
+        .div-coche { 
+            width: 7rem;
+            height: 100%;
+            
+            visibility: hidden; 
+              position: absolute;
+              right: 0;
+              top: 0;
+             background-color: $Tertiaire; 
+             display: flex;
+             justify-content: center;
+             align-items: center;
+              transform-origin: right;
+              left: 100%; 
+              transition: transform 0.8s ;
+              border-radius:0;
+              i{
+                background-color: white;
+                color: $Tertiaire;
+                font-size: 27px;
+                transform: rotate(50deg);
+                transition: transform 1s;
+                border-radius: 7px;
+              }
+          }  
         
-          .div-nomDesPlats{ //btn
-            display: flex;
-            flex-direction: column;
-           
+       
          
-        
-            &:hover + .div-coche{
-                 transform: translate(-100px, 0%); 
-                 
-                }
-        
-           
+
+               
+                    
+    }  
+    @keyframes animation-defilement-menu {
+        0%{
+            transform: translateY(-50%);
+            opacity: 0;
             
-        
             
-            .div-coche{ //ball
-                width: 10%;
-                //visibility: hidden; 
-               position: absolute;
-               right: -97px;
-               width: 10%;
-               top: 0;
-               /* right: -113px; */
-               height: 100%;
-               transform-origin: right;
-               left: 100%; 
-               transition:transform 1500ms ;
-            }   
-                          
-       }              
-    }          
+        }
+        100%{
+            transform: translateY(0);
+            opacity: 1;
+        }
+      }
+             
          
         
             
