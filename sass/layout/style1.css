@@ -8,44 +8,22 @@
   src: url("../fonts/shrikhand/shrikhand.ttf");
 }
 
-/*page principale*/
-footer {
-  color: white;
-  padding: 0 0 5px 40px;
-  background: #373535;
-}
-
-footer img {
-  width: 6rem;
-  height: 1rem;
-  padding: 1.7rem 0 1rem 0;
-  -webkit-filter: invert(100%);
-          filter: invert(100%);
-}
-
-footer ul {
-  padding: 0;
+body {
+  background: #f2f2f2;
   margin: 0;
-  list-style-type: none;
 }
 
-footer ul li {
-  margin-bottom: 0.5rem;
+* {
+  font-family: "Roboto-Regular";
 }
 
-footer a {
-  text-decoration: none;
-  color: inherit;
-}
-
-/*fin page principale*/
 .entrees h3, .plats h3, .desserts h3 {
   width: 2.5rem;
   border-bottom: 3px solid #99E2D0;
   padding-bottom: 0.5rem;
 }
 
-.entrees div, .plats div, .desserts div {
+.entrees .grand-div-sections .div-entrees-plats-desserts {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -64,26 +42,29 @@ footer a {
           flex-direction: column;
 }
 
-.entrees div :hover + .div-coche, .plats div :hover + .div-coche, .desserts div :hover + .div-coche {
-  -webkit-transform: translateX(-107px);
-          transform: translateX(-107px);
+.entrees .grand-div-sections .div-entrees-plats-desserts :hover + .div-prix-coche {
+  -webkit-transform: translateX(-96px);
+          transform: translateX(-96px);
+}
+
+.entrees .grand-div-sections .div-entrees-plats-desserts :hover + .div-prix-coche .div-coche {
   visibility: visible;
 }
 
-.entrees div :hover + .div-coche i, .plats div :hover + .div-coche i, .desserts div :hover + .div-coche i {
+.entrees .grand-div-sections .div-entrees-plats-desserts :hover + .div-prix-coche .div-coche i {
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
 }
 
-.entrees div .p1, .plats div .p1, .desserts div .p1 {
+.entrees .grand-div-sections .div-entrees-plats-desserts .p1 {
   margin: 0;
 }
 
-.entrees div .p1 strong, .plats div .p1 strong, .desserts div .p1 strong {
+.entrees .grand-div-sections .div-entrees-plats-desserts .p1 strong {
   padding: 0;
 }
 
-.entrees div .p2, .plats div .p2, .desserts div .p2 {
+.entrees .grand-div-sections .div-entrees-plats-desserts .p2 {
   margin: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -97,13 +78,63 @@ footer a {
   padding: 0.5rem 0rem 1rem 1rem;
 }
 
-.entrees div .p2 span, .plats div .p2 span, .desserts div .p2 span {
+.entrees .grand-div-sections .div-entrees-plats-desserts .p2 span {
   padding: 0;
 }
 
-.entrees div .p2 .prix, .plats div .p2 .prix, .desserts div .p2 .prix {
+.entrees .grand-div-sections .div-entrees-plats-desserts .div-prix-coche {
+  position: absolute;
+  right: 0;
+  top: 0;
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  left: 97%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+}
+
+.entrees .grand-div-sections .div-entrees-plats-desserts .div-prix-coche .prix {
   padding-right: 1rem;
   font-weight: bold;
+  visibility: visible;
+}
+
+.entrees .grand-div-sections .div-entrees-plats-desserts .div-prix-coche .div-coche {
+  height: 100%;
+  visibility: hidden;
+  background-color: #99E2D0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 17.5px 2rem 17.5px 2rem;
+  border-radius: 0 1rem 1rem 0rem;
+}
+
+.entrees .grand-div-sections .div-entrees-plats-desserts .div-prix-coche .div-coche i {
+  background-color: white;
+  color: #99E2D0;
+  font-size: 27px;
+  -webkit-transform: rotate(50deg);
+          transform: rotate(50deg);
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+  border-radius: 7px;
 }
 
 .btn-commander {
@@ -268,15 +299,6 @@ main h2 .fas:hover {
   opacity: 1;
 }
 
-* {
-  font-family: "Roboto-Regular";
-}
-
-body {
-  background: #f2f2f2;
-  margin: 0;
-}
-
 header div h1 {
   margin: 0;
   text-align: center;
@@ -330,7 +352,7 @@ main h2 span {
       grid-column-start: 2;
 }
 
-.entrees #grand-div-entrees {
+.entrees .grand-div-sections {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -338,48 +360,9 @@ main h2 span {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-animation: animation-defilement-menu 3s cubic-bezier(0.66, 0.25, 0.31, 0.89);
-          animation: animation-defilement-menu 3s cubic-bezier(0.66, 0.25, 0.31, 0.89);
-}
-
-.entrees .div-coche {
-  width: 7rem;
-  height: 100%;
-  visibility: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  background-color: #99E2D0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-transform-origin: right;
-          transform-origin: right;
-  left: 100%;
-  -webkit-transition: -webkit-transform 0.8s;
-  transition: -webkit-transform 0.8s;
-  transition: transform 0.8s;
-  transition: transform 0.8s, -webkit-transform 0.8s;
-  border-radius: 0;
-}
-
-.entrees .div-coche i {
-  background-color: white;
-  color: #99E2D0;
-  font-size: 27px;
-  -webkit-transform: rotate(50deg);
-          transform: rotate(50deg);
-  -webkit-transition: -webkit-transform 1s;
-  transition: -webkit-transform 1s;
-  transition: transform 1s;
-  transition: transform 1s, -webkit-transform 1s;
-  border-radius: 7px;
+  -webkit-animation: animation-defilement-menu 3s cubic-bezier(0.02, 1.1, 1, 1);
+          animation: animation-defilement-menu 3s cubic-bezier(0.02, 1.1, 1, 1);
+  background-color: red;
 }
 
 @-webkit-keyframes animation-defilement-menu {
@@ -416,6 +399,35 @@ main h2 span {
 .desserts {
   -ms-grid-column: 2;
       grid-column-start: 2;
+}
+
+footer {
+  color: white;
+  padding: 0 0 5px 40px;
+  background: #373535;
+}
+
+footer img {
+  width: 6rem;
+  height: 1rem;
+  padding: 1.7rem 0 1rem 0;
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+}
+
+footer ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+footer ul li {
+  margin-bottom: 0.5rem;
+}
+
+footer a {
+  text-decoration: none;
+  color: inherit;
 }
 
 @media screen and (min-width: 992px) {

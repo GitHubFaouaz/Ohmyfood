@@ -1,0 +1,133 @@
+body{
+    background: $gris;
+    margin: 0;
+   
+  }
+  *{
+    font-family: "Roboto-Regular";
+  }
+%h3-page-secondaire{
+    width: 2.5rem; 
+    border-bottom: 3px solid $Tertiaire;
+    padding-bottom: 0.5rem;
+  
+  }
+
+  
+%div-entrees-plats-desserts{
+      display: flex;
+      width: 100%;
+      border-radius: 1rem;
+      background: white;
+      margin-bottom: 1rem;
+      box-shadow: 2px 2px 3px $gris-shadow;
+      cursor: pointer;
+      position: relative; 
+      display: flex;
+      flex-direction: column;
+      
+     
+        
+        :hover + .div-prix-coche {
+         
+          transform:translateX(-96px);
+          
+         
+          .div-coche{
+            visibility: visible;
+            i{
+              transform: rotate(0deg) ;
+            }
+          }
+  }   
+      .p1{
+    
+     margin: 0;
+     
+     strong{
+       padding: 0;
+     
+       
+     }
+   }
+   .p2{
+    
+      margin: 0; 
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.5rem 0rem 1rem 1rem;
+  
+      span{
+        padding:0;
+      }
+     
+    }
+    .div-prix-coche{
+      position: absolute;
+      right: 0;
+      top: 0;
+      transform-origin: right;
+      left: 97%; 
+      display: flex;
+      align-items: center;
+      transition: transform 1s ;
+     
+       .prix{
+        padding-right: 1rem;
+        font-weight: bold;
+        visibility: visible;
+      }
+      .div-coche { 
+           
+        height: 100%;
+        
+        visibility: hidden;  
+       
+         background-color: $Tertiaire; 
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         padding: 17.5px 2rem 17.5px 2rem;
+         border-radius: 0 1rem 1rem 0rem;
+          
+          i{
+            background-color: white;
+            color: $Tertiaire;
+            font-size: 27px;
+            transform: rotate(50deg);
+            transition: transform 1s;
+            border-radius: 7px;
+          }
+      }  
+    }
+}
+  
+  
+  
+  
+  %btn-commande {
+    grid-column-start: 2;
+    text-align: center;
+    button{
+    padding: 1rem 3.5rem;
+    border-radius: 2rem;
+    background-image: linear-gradient( #9356DC 10%, #FF79DA 100%);
+    border: 0;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: $box-shadow-Element;
+    margin-top: 1.5rem;
+    transition: transform 400ms;
+  
+      &:hover{
+        transform: scale(1.02);
+        font-size: 18px;
+       
+       
+      }
+    }
+  }
+
+  

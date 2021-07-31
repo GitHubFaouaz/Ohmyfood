@@ -1,120 +1,34 @@
 
-/*page principale*/
-%footer {
-    color: white;
-    padding: 0 0 5px 40px;
-    background: #373535;
-    img{
-        width: 6rem;
-        height: 1rem;
-        padding: 1.7rem 0 1rem 0;
-        filter: invert(100%);// permet d'appliquer des filtres et d'obtenir des effets graphiques de flou, de saturation, etc. Les filtres sont généralement utilisés pour ajuster le rendu d'une image, d'un arrière-plan ou des bordures.
-        
-    }  
-    ul{
-        padding: 0;
-        margin: 0;
-        list-style-type: none;
-        li{
-            margin-bottom: 0.5rem;
-
-        }
-    }
-    a{
-      text-decoration: none;
-      color: inherit;
-    }
-  }
-  
-
-  /*fin page principale*/
-  %h3-page-secondaire{
-    width: 2.5rem; 
-    border-bottom: 3px solid $Tertiaire;
-    padding-bottom: 0.5rem;
-  
-  }
-  
-  
-  %div-des-sectionsPages{
-      display: flex;
-      width: 100%;
-      border-radius: 1rem;
-      background: white;
-      margin-bottom: 1rem;
-      box-shadow: 2px 2px 3px $gris-shadow;
-      cursor: pointer;
-      position: relative; 
-      display: flex;
-      flex-direction: column;
-      
-        
-        :hover + .div-coche  {
-         
-          transform:translateX(-107px);
-          visibility: visible;
-          i{
-            transform: rotate(0deg) ;
-          } 
+body{
+   
+  margin: 0;
+  position: relative;
+ 
           
-       }   
-      
-        
-     
+}
+*{
+  font-family: "Roboto-Regular";
+}
+#div-loader{
+  position: fixed;
     
+    top: 0;
+   right: 0;
+   bottom: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 999;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    animation:vanish 0s ; //loading-spinner
+    animation-fill-mode: both;//  indique la façon dont une animation CSS doit appliquer les styles à sa cible avant et après son exécution.
+    @extend %animation-loading-spinner;
+}
+#bloc-page{
 
-  
-      .p1{
-    
-     margin: 0;
-     
-     strong{
-       padding: 0;
-       
-     }
-   }
-   .p2{
-    
-      margin: 0; 
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0.5rem 0rem 1rem 1rem;
-  
-      span{
-        padding:0;
-      }
-      .prix{
-        padding-right: 1rem;
-        font-weight: bold;
-       
-      }
-      
-      
-     }
-  }
-  %btn-commande {
-    grid-column-start: 2;
-    text-align: center;
-    button{
-    padding: 1rem 3.5rem;
-    border-radius: 2rem;
-    background-image: linear-gradient( #9356DC 10%, #FF79DA 100%);
-    border: 0;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-    box-shadow: $box-shadow-Element;
-    margin-top: 1.5rem;
-    transition: transform 400ms;
-  
-      &:hover{
-        transform: scale(1.02);
-        font-size: 18px;
-       
-       
-      }
-    }
-  }
-
-  
+margin: auto; 
+max-width: 768px;
+}
