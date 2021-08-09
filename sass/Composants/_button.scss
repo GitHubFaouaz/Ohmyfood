@@ -1,0 +1,45 @@
+
+.btn-commander { //button menu
+    grid-column-start: 2;
+    text-align: center;
+    button{
+    padding: 1rem 3.5rem;
+    border-radius: 2rem;
+    background-image: linear-gradient(to left,$Primaire,$Secondaire);
+    border: 0;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: $box-shadow-Element;
+    margin-top: 1.5rem;
+    
+  
+      &:hover{
+        box-shadow:  5px 5px 10px  $gris-shadow;
+        filter: contrast(1.3);
+       
+       
+      }
+    }
+  }
+  %button{//button page principale
+    padding: 1rem;
+    border-radius: 2rem;
+    background-image: linear-gradient(to left,$Primaire,$Secondaire);
+    color: white;
+    border: 0;
+    font-size: 16px;
+    margin-bottom: 3.5rem ;
+    box-shadow: $box-shadow-Element;
+    
+    cursor: pointer;
+    &:hover{
+      box-shadow:  5px 5px 10px  $gris-shadow;
+      filter: contrast(1.3);
+     
+      
+   }
+  
+}
+
+  

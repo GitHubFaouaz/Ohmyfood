@@ -36,26 +36,14 @@
          span{
              margin-bottom: 2rem;
              font-size: 1.2rem;
+             text-align: center;
          }
              
          
          button{
-             padding: 1rem;
-             border-radius: 2rem;
-             background-image: linear-gradient(to left,$Primaire,$Secondaire);
-             color: white;
-             border: 0;
-             font-size: 16px;
-             margin-bottom: 3.5rem ;
-             box-shadow: $box-shadow-Element;
-             transition: color, 1s;
-             cursor: pointer;
-             &:hover{
-                 color:black;
-                 font-size: 17px;
-                
-             }
-         }
+            @extend %button;
+          
+        }
      }
      
  
@@ -72,9 +60,15 @@
              border-radius: 1rem;
              display: flex;
              align-items: center;
-             &:hover{
-                 background: #9356dc59;
-             }
+             &:hover {
+                background: #a983d859;
+                
+              
+                .fas{
+                    color:$Primaire;
+                }
+            }
+                
              
          }
          h2{
@@ -88,6 +82,7 @@
            border-radius: 1.5rem;
            box-shadow: $box-shadow-Element;
            font-weight: bold;
+        
          }
          .function-number{
              padding: 4px 8px;
@@ -98,6 +93,8 @@
          }
          .fas{
              margin: 15px;
+           
+            
          }    
  
         
@@ -126,6 +123,7 @@
       h2{
          grid-column-start: 2;
          margin-top: 3rem;
+         
      }
      a{
          text-decoration: none;
@@ -145,6 +143,7 @@
          top: 17px;
          background: $Tertiaire;
          padding: 4px 7px;
+        
      }
      h3 {
          margin: 15px 0 8px 15px;

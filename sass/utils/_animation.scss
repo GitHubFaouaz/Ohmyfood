@@ -16,42 +16,51 @@
         border-radius: 50%;
         background: white;
         animation: cercle 3s linear infinite;
+       
         
   
          .lettre{
              
-             font-size: 25px;
+             font-size: 27px;
              letter-spacing: 15px;
              
-             animation: flash 1.2s linear infinite;
+             animation: flash 3s linear infinite;
             }
              & :nth-child(1){
-               animation-delay:0.1s; 
+               animation-delay:0.1s;
+               
              } & :nth-child(2){
                 animation-delay:0.2s; 
+              
              } & :nth-child(3){
-                animation-delay:0.3s; 
+                animation-delay:0.3s;
+               
              } & :nth-child(4){
-                animation-delay:0.4s; 
+                animation-delay:0.4s;
+               
              } & :nth-child(5){
                 animation-delay:0.5s; 
+             
              } & :nth-child(6){
                 animation-delay:0.6s; 
+               
              } & :nth-child(7){
-                animation-delay:0.7s; 
+                animation-delay:0.7s;
+              
              } & :nth-child(8){
-                animation-delay:0.8s; 
+                animation-delay:0.8s;
+                
              }
         }
         @keyframes cercle {
         0%{ 
-          transform: rotate(0deg) scale(1);
+          transform: scale(1);
           border-top-color:#9356DC;
           border-bottom-color:#9356DC;
           
         }
         50% {
-          transform: rotate(180deg) scale(1.25);
+          transform: rotate(180deg) scale(1.5);
          
           border-top-color:white;
           border-bottom-color:white;
@@ -71,19 +80,19 @@
         @keyframes flash {
            
             0% {
-                color:$gradiant;
-                text-shadow: 0px 0px 7px $Primaire;
+                color:yellow;
+                text-shadow: 0px 0px 7px black; 
                 transform:  scale(1);
             }
             50% {
-              color:grey;
+              color:black;
               
               transform:  scale(1.25);
-              
+              text-shadow: 0px 0px 7px black; 
             }
             100%{
-                color:$gradiant;
-                text-shadow: 0px 0px 7px red; 
+                color:yellow;
+                text-shadow: 0px 0px 7px black; 
                 transform:  scale(1);
                
                 
@@ -92,17 +101,15 @@
         @keyframes vanish {
           
         0%{
-          opacity: 0.7;
-          
+         
+          visibility: visible;
         }
        
         
-        80%{
-          opacity: 0.5;
-        }
+       
         100%{
-          opacity: 0;
-          z-index: -10;//pour passe en dessous de body
+          visibility: hidden;
+         
           
         }
           
@@ -130,7 +137,7 @@
         transition: opacity 1s;
         color: transparent;
       
-        &:hover{
+        &:active{
            opacity:1;
         
             
@@ -138,6 +145,42 @@
     }
 
 }
+
+%animationCoeur-desktop{
+  .far{
+    position: absolute;
+    right: 1.5rem;
+    cursor: pointer;
+    font-size: 28px;
+    
+}
+.fas{//coeur invisible
+
+    position: absolute;
+    right: 1.5rem;
+    cursor: pointer;
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(80%, #9356DC), color-stop(20%, #FF79DA));
+    -webkit-background-clip: text;
+    opacity: 0;
+    font-size: 28px;
+    transition: opacity 1s;
+    color: transparent;
+  
+    /*&:hover{
+       opacity: 1;
+    
+        
+    }*/
+}
+
+}
+
+
+
+
+
+
+//animation page secondaire 
 %animationCoeur-pagesSecondaire{
     .far{
         position: absolute;
@@ -164,4 +207,21 @@
             
         }
     }
-} 
+}
+
+
+@keyframes animation-defilement-menu {
+  0%{
+      transform: translateY(50%);
+      opacity: 0;
+      
+      
+  }
+
+  100%{
+      transform: translateY(0);
+      opacity: 1;
+      
+  }
+}
+ 

@@ -6,16 +6,44 @@ body{
   *{
     font-family: "Roboto-Regular";
   }
+  #main-la-note-enchante{//juste pour la page la-note-enchante
+    display: grid;
+    grid-template-columns: 3% 94% 3%;
+    grid-template-rows: 4rem 1fr 0.8fr 0.8fr 6rem ; 
+    background: $gris;
+    border-radius: 2rem 2rem 0 0;
+    position: relative;
+    top: -2rem;
+
+}
 %h3-page-secondaire{
     width: 2.5rem; 
     border-bottom: 3px solid $Tertiaire;
     padding-bottom: 0.5rem;
   
-  }
-
+}
+%sections{
+  grid-column-start: 2;
+        
+  h3{
+      @extend %h3-page-secondaire;
+      
+  } 
+ .grand-div-sections{
+  display: flex;
+  flex-direction: column;
+  animation:animation-defilement-menu 3s cubic-bezier(.02,1.1,1,1);
+  
+    .div-entrees-plats-desserts {// entrees plats desserts
+      @extend %div-entrees-plats-desserts;
+       
+    }     
+      
+  } 
+}
   
 %div-entrees-plats-desserts{
-      display: flex;
+     
       width: 100%;
       border-radius: 1rem;
       background: white;
@@ -24,13 +52,14 @@ body{
       cursor: pointer;
       position: relative; 
       display: flex;
-      flex-direction: column;
+      justify-content: space-between;
+      overflow: hidden;// l'animation commence à l'interieur
       
      
         
         :hover + .div-prix-coche {
          
-          transform:translateX(-96px);
+          transform:translateX(-95px);
           
          
           .div-coche{
@@ -39,95 +68,87 @@ body{
               transform: rotate(0deg) ;
             }
           }
-  }   
-      .p1{
+  }
+ .desc-menu{
+    display: flex;
+    flex-direction: column;
+    flex: 2;
     
-     margin: 0;
-     
+    white-space: nowrap; 
+    text-overflow: ellipsis;// pour les pointillés
+    overflow: hidden;
+
+    
+  }   
+      h4{
+    
+        margin: 1rem 0px 0px 1rem;
+        white-space: nowrap; 
+        text-overflow: ellipsis;// pour les pointillés
+        overflow: hidden;
+
      strong{
        padding: 0;
      
        
      }
    }
-   .p2{
+   p{
     
       margin: 0; 
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
       padding: 0.5rem 0rem 1rem 1rem;
-  
+      white-space: nowrap; 
+      text-overflow: ellipsis;// pour les pointillés
+      overflow: hidden;
+     
+      
+      
       span{
         padding:0;
       }
      
     }
     .div-prix-coche{
-      position: absolute;
-      right: 0;
-      top: 0;
-      transform-origin: right;
-      left: 97%; 
+     
+    
       display: flex;
-      align-items: center;
-      transition: transform 1s ;
+      
+      transition: transform 500ms;
      
        .prix{
-        padding-right: 1rem;
+        margin: 2.5rem 1rem 0 1rem;
         font-weight: bold;
         visibility: visible;
       }
       .div-coche { 
            
-        height: 100%;
+       
         
-        visibility: hidden;  
+         visibility: hidden;  
        
          background-color: $Tertiaire; 
          display: flex;
-         justify-content: center;
+         
          align-items: center;
-         padding: 17.5px 2rem 17.5px 2rem;
+         padding: 0 2rem 0 2rem;
          border-radius: 0 1rem 1rem 0rem;
+         margin: 0 -96px 0 0;
           
           i{
             background-color: white;
             color: $Tertiaire;
-            font-size: 27px;
-            transform: rotate(50deg);
+            font-size: 20px;
+            transform: rotate(120deg);
             transition: transform 1s;
-            border-radius: 7px;
+            border-radius: 50%;
+            padding: 5px;
           }
       }  
     }
 }
   
+
   
-  
-  
-  %btn-commande {
-    grid-column-start: 2;
-    text-align: center;
-    button{
-    padding: 1rem 3.5rem;
-    border-radius: 2rem;
-    background-image: linear-gradient( #9356DC 10%, #FF79DA 100%);
-    border: 0;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-    box-shadow: $box-shadow-Element;
-    margin-top: 1.5rem;
-    transition: transform 400ms;
-  
-      &:hover{
-        transform: scale(1.02);
-        font-size: 18px;
-       
-       
-      }
-    }
-  }
+ 
 
   
