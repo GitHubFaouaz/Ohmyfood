@@ -111,7 +111,8 @@
           background: white;
           grid-column-start: 2;
           border-radius: 1.5rem;
-          height: 250px;
+          //height: 250px;
+          height: 335px;
           position: relative;
           padding-bottom: 0.3rem;
           box-shadow: $box-shadow-Element;
@@ -131,7 +132,8 @@
      }
      .class-img-Resto{
          width:100% ;
-         height: 175px;
+         //height: 175px;
+         height: 245px;
          object-fit: cover;
          border-radius: 1.5rem 1.5rem 0 0;
          position: relative;

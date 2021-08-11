@@ -44,7 +44,7 @@ body{
   
 %div-entrees-plats-desserts{
      
-      width: 100%;
+      width: 35%;//100%
       border-radius: 1rem;
       background: white;
       margin-bottom: 1rem;
@@ -60,6 +60,7 @@ body{
         :hover + .div-prix-coche {
          
           transform:translateX(-95px);
+         
           
          
           .div-coche{
@@ -74,8 +75,7 @@ body{
     flex-direction: column;
     flex: 2;
     
-    white-space: nowrap; 
-    text-overflow: ellipsis;// pour les pointillés
+   
     overflow: hidden;
 
     
@@ -100,6 +100,7 @@ body{
       white-space: nowrap; 
       text-overflow: ellipsis;// pour les pointillés
       overflow: hidden;
+      
      
       
       
@@ -118,7 +119,7 @@ body{
        .prix{
         margin: 2.5rem 1rem 0 1rem;
         font-weight: bold;
-        visibility: visible;
+        
       }
       .div-coche { 
            
@@ -138,7 +139,7 @@ body{
             background-color: white;
             color: $Tertiaire;
             font-size: 20px;
-            transform: rotate(120deg);
+            transform: rotate(-360deg);
             transition: transform 1s;
             border-radius: 50%;
             padding: 5px;

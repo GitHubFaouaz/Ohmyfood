@@ -1,4 +1,4 @@
-
+//tablette
 @media  screen and (min-width: 769px){ 
     #bloc-page{
     max-width: 991px;
@@ -89,13 +89,14 @@
         grid-column-start: 3;
         grid-row-start: 3;
     }
+   
 }
    
 
 }
 
 
-
+//desktop
     @media  screen and (min-width:992px){
         #bloc-page{
             max-width: 1950px;   
@@ -168,7 +169,7 @@
     }
     #sectionRestaurant{
      
-    
+     
        
         h3 {
             margin: 15px 0 8px 15px;

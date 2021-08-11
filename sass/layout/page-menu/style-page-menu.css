@@ -54,7 +54,7 @@ main .entrees .grand-div-sections, main .plats .grand-div-sections, main .desser
 }
 
 main .entrees .grand-div-sections .div-entrees-plats-desserts, main .plats .grand-div-sections .div-entrees-plats-desserts, main .desserts .grand-div-sections .div-entrees-plats-desserts {
-  width: 100%;
+  width: 35%;
   border-radius: 1rem;
   background: white;
   margin-bottom: 1rem;
@@ -96,8 +96,6 @@ main .entrees .grand-div-sections .div-entrees-plats-desserts .desc-menu, main .
   -webkit-box-flex: 2;
       -ms-flex: 2;
           flex: 2;
-  white-space: nowrap;
-  text-overflow: ellipsis;
   overflow: hidden;
 }
 
@@ -137,7 +135,6 @@ main .entrees .grand-div-sections .div-entrees-plats-desserts .div-prix-coche, m
 main .entrees .grand-div-sections .div-entrees-plats-desserts .div-prix-coche .prix, main .plats .grand-div-sections .div-entrees-plats-desserts .div-prix-coche .prix, main .desserts .grand-div-sections .div-entrees-plats-desserts .div-prix-coche .prix {
   margin: 2.5rem 1rem 0 1rem;
   font-weight: bold;
-  visibility: visible;
 }
 
 main .entrees .grand-div-sections .div-entrees-plats-desserts .div-prix-coche .div-coche, main .plats .grand-div-sections .div-entrees-plats-desserts .div-prix-coche .div-coche, main .desserts .grand-div-sections .div-entrees-plats-desserts .div-prix-coche .div-coche {
@@ -158,8 +155,8 @@ main .entrees .grand-div-sections .div-entrees-plats-desserts .div-prix-coche .d
   background-color: white;
   color: #99E2D0;
   font-size: 20px;
-  -webkit-transform: rotate(120deg);
-          transform: rotate(120deg);
+  -webkit-transform: rotate(-360deg);
+          transform: rotate(-360deg);
   -webkit-transition: -webkit-transform 1s;
   transition: -webkit-transform 1s;
   transition: transform 1s;
@@ -343,8 +340,8 @@ header #img-photo {
 main {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 40px 90% 40px;
-      grid-template-columns: 40px 90% 40px;
+  -ms-grid-columns: 3% 94% 3%;
+      grid-template-columns: 3% 94% 3%;
   -ms-grid-rows: 4rem 1fr 1fr 1fr 6rem;
       grid-template-rows: 4rem 1fr 1fr 1fr 6rem;
   background: #f2f2f2;
@@ -419,6 +416,15 @@ footer ul li {
   margin-bottom: 0.5rem;
 }
 
+footer ul .fa-utensils {
+  margin-right: 10px;
+}
+
+footer ul .fa-hands-helping {
+  margin-right: 7px;
+  font-size: 13px;
+}
+
 footer a {
   text-decoration: none;
   color: inherit;
@@ -432,8 +438,8 @@ footer a:hover {
   main {
     margin: auto;
     max-width: 1200px;
-    -webkit-box-shadow: 0px -5px 11px #bfb4b4;
-            box-shadow: 0px -5px 11px #bfb4b4;
+    -webkit-box-shadow: 0px 0px 7px #bfb4b4;
+            box-shadow: 0px 0px 7px #bfb4b4;
   }
   footer {
     margin-top: -2rem;

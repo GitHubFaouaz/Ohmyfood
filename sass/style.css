@@ -35,8 +35,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-animation: vanish 3s;
-          animation: vanish 3s;
+  -webkit-animation: vanish 0s;
+          animation: vanish 0s;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
 }
@@ -469,7 +469,7 @@ header img {
   -ms-grid-column: 2;
       grid-column-start: 2;
   border-radius: 1.5rem;
-  height: 250px;
+  height: 335px;
   position: relative;
   padding-bottom: 0.3rem;
   -webkit-box-shadow: 2px 2px 3px #bfb4b4;
@@ -498,7 +498,7 @@ header img {
 
 #sectionRestaurant .class-img-Resto {
   width: 100%;
-  height: 175px;
+  height: 245px;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 1.5rem 1.5rem 0 0;
@@ -545,6 +545,15 @@ footer ul {
 
 footer ul li {
   margin-bottom: 0.5rem;
+}
+
+footer ul .fa-utensils {
+  margin-right: 10px;
+}
+
+footer ul .fa-hands-helping {
+  margin-right: 7px;
+  font-size: 13px;
 }
 
 footer a {
