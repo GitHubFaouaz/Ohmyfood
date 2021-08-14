@@ -44,7 +44,7 @@ body{
   
 %div-entrees-plats-desserts{
      
-      width: 35%;//100%
+      width: 100%;//100%
       border-radius: 1rem;
       background: white;
       margin-bottom: 1rem;
@@ -86,6 +86,7 @@ body{
         white-space: nowrap; 
         text-overflow: ellipsis;// pour les pointillés
         overflow: hidden;
+        font-size: 18px;
 
      strong{
        padding: 0;
@@ -100,6 +101,7 @@ body{
       white-space: nowrap; 
       text-overflow: ellipsis;// pour les pointillés
       overflow: hidden;
+      font-size: 18px;
       
      
       
@@ -114,10 +116,10 @@ body{
     
       display: flex;
       
-      transition: transform 500ms;
+      transition: transform 700ms;
      
        .prix{
-        margin: 2.5rem 1rem 0 1rem;
+        margin: 2.8rem 1rem 0 1rem;
         font-weight: bold;
         
       }

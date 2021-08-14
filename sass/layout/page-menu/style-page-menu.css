@@ -54,7 +54,7 @@ main .entrees .grand-div-sections, main .plats .grand-div-sections, main .desser
 }
 
 main .entrees .grand-div-sections .div-entrees-plats-desserts, main .plats .grand-div-sections .div-entrees-plats-desserts, main .desserts .grand-div-sections .div-entrees-plats-desserts {
-  width: 35%;
+  width: 100%;
   border-radius: 1rem;
   background: white;
   margin-bottom: 1rem;
@@ -104,6 +104,7 @@ main .entrees .grand-div-sections .div-entrees-plats-desserts h4, main .plats .g
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+  font-size: 18px;
 }
 
 main .entrees .grand-div-sections .div-entrees-plats-desserts h4 strong, main .plats .grand-div-sections .div-entrees-plats-desserts h4 strong, main .desserts .grand-div-sections .div-entrees-plats-desserts h4 strong {
@@ -116,6 +117,7 @@ main .entrees .grand-div-sections .div-entrees-plats-desserts p, main .plats .gr
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+  font-size: 18px;
 }
 
 main .entrees .grand-div-sections .div-entrees-plats-desserts p span, main .plats .grand-div-sections .div-entrees-plats-desserts p span, main .desserts .grand-div-sections .div-entrees-plats-desserts p span {
@@ -126,14 +128,14 @@ main .entrees .grand-div-sections .div-entrees-plats-desserts .div-prix-coche, m
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-transition: -webkit-transform 500ms;
-  transition: -webkit-transform 500ms;
-  transition: transform 500ms;
-  transition: transform 500ms, -webkit-transform 500ms;
+  -webkit-transition: -webkit-transform 700ms;
+  transition: -webkit-transform 700ms;
+  transition: transform 700ms;
+  transition: transform 700ms, -webkit-transform 700ms;
 }
 
 main .entrees .grand-div-sections .div-entrees-plats-desserts .div-prix-coche .prix, main .plats .grand-div-sections .div-entrees-plats-desserts .div-prix-coche .prix, main .desserts .grand-div-sections .div-entrees-plats-desserts .div-prix-coche .prix {
-  margin: 2.5rem 1rem 0 1rem;
+  margin: 2.8rem 1rem 0 1rem;
   font-weight: bold;
 }
 
