@@ -55,8 +55,8 @@ body {
 .btn-commander button {
   padding: 1rem 3.5rem;
   border-radius: 2rem;
-  background-image: -webkit-gradient(linear, right top, left top, from(#9356DC), to(#FF79DA));
-  background-image: linear-gradient(to left, #9356DC, #FF79DA);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background-image: linear-gradient(#FF79DA, #9356DC);
   border: 0;
   color: white;
   font-weight: bold;
@@ -76,8 +76,8 @@ body {
 #sectionReservation #reservation--search button {
   padding: 1rem;
   border-radius: 2rem;
-  background-image: -webkit-gradient(linear, right top, left top, from(#9356DC), to(#FF79DA));
-  background-image: linear-gradient(to left, #9356DC, #FF79DA);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background-image: linear-gradient(#FF79DA, #9356DC);
   color: white;
   border: 0;
   font-size: 16px;
@@ -336,6 +336,24 @@ body {
     -webkit-transform: translateY(0);
             transform: translateY(0);
     opacity: 1;
+  }
+}
+
+@-webkit-keyframes animeCoche {
+  from {
+    margin-right: 0px;
+  }
+  to {
+    margin-right: 96px;
+  }
+}
+
+@keyframes animeCoche {
+  from {
+    margin-right: 0px;
+  }
+  to {
+    margin-right: 96px;
   }
 }
 

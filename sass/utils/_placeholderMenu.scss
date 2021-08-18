@@ -4,7 +4,7 @@ body{
    
   }
   *{
-    font-family: "RobotoCondensed-BoldItalic";
+    font-family: "Roboto-Regular",sans-serif;
   }
   #main-la-note-enchante{//juste pour la page la-note-enchante
     display: grid;
@@ -32,30 +32,52 @@ body{
  .grand-div-sections{
   display: flex;
   flex-direction: column;
-  //animation:animation-defilement-menu 3s cubic-bezier(.02,1.1,1,1);
+  
+  
+            
+    animation:animation-defilement-menu 1.5s cubic-bezier(.02,1.1,1,1);
+    
   
     .div-entrees-plats-desserts {// entrees plats desserts
       @extend %div-entrees-plats-desserts;
        
     }
-  /*.anim-delay1{
+ }
+ .grand-div-sections2{
+  display: flex;
+  flex-direction: column;
+  
+  
+            
     animation:animation-defilement-menu 3s cubic-bezier(.02,1.1,1,1);
-  }
-  .anim-delay2{
-    animation:animation-defilement-menu 1s cubic-bezier(.02,1.1,1,1);
-  } 
-  .anim-delay3{
-    animation:animation-defilement-menu 1s cubic-bezier(.02,1.1,1,1);
-  }*/          
-      
-  }
+    
+  
+    .div-entrees-plats-desserts {// entrees plats desserts
+      @extend %div-entrees-plats-desserts;
+       
+    }
+ }
+ .grand-div-sections3{
+  display: flex;
+  flex-direction: column;
+  
+  
+            
+    animation:animation-defilement-menu 4s cubic-bezier(.02,1.1,1,1);
+    
+  
+    .div-entrees-plats-desserts {// entrees plats desserts
+      @extend %div-entrees-plats-desserts;
+       
+    }
+ }
  
      
 }
   
 %div-entrees-plats-desserts{
      
-      width: 100%;//100%
+      width: 100%;
       
       border-radius: 1rem;
       background: white;
@@ -66,7 +88,6 @@ body{
       display: flex;
       justify-content: space-between;
       overflow: hidden;// l'animation commence à l'interieur
-      
      
         
         :hover + .div-prix-coche {
@@ -89,7 +110,7 @@ body{
     
    
     overflow: hidden;
-
+    
     
   }   
       h4{
@@ -154,7 +175,7 @@ body{
             color: $Tertiaire;
             font-size: 20px;
             transform: rotate(-360deg);
-            transition: transform 1.5s;
+            transition: transform 1s;
             border-radius: 50%;
             padding: 5px;
           }
@@ -162,17 +183,7 @@ body{
     }
 }
   
-@keyframes animeCoche {
 
-  from{
-    margin-right: 0px;
-  }
-  to{
-    margin-right: 96px ;
-    
-  }
-}
-  
  
 
   

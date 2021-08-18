@@ -217,10 +217,12 @@
 }
 
 
+
 @keyframes animation-defilement-menu {
   0%{
       transform: translateY(50%);
       opacity: 0;
+    
       
       
       
@@ -232,4 +234,17 @@
       
   }
 }
+
+
+@keyframes animeCoche {
+
+  from{
+    margin-right: 0px;
+  }
+  to{
+    margin-right: 96px ;
+    
+  }
+}
+  
  

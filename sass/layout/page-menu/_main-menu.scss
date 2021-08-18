@@ -21,13 +21,17 @@ main{
     .entrees{ //section entrees
     @extend %sections;
    
+   
     }
     .plats{
         @extend %sections;
        
+        
     }
     .desserts{
         @extend %sections;
+       
+       
     }
 
     

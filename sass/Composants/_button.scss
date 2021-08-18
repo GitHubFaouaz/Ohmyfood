@@ -5,7 +5,7 @@
     button{
     padding: 1rem 3.5rem;
     border-radius: 2rem;
-    background-image: linear-gradient(to left,$Primaire,$Secondaire);
+    background-image: linear-gradient($Secondaire,$Primaire);
     border: 0;
     color: white;
     font-weight: bold;
@@ -25,7 +25,7 @@
   %button{//button page principale
     padding: 1rem;
     border-radius: 2rem;
-    background-image: linear-gradient(to left,$Primaire,$Secondaire);
+    background-image: linear-gradient($Secondaire,$Primaire);
     color: white;
     border: 0;
     font-size: 16px;
