@@ -15,7 +15,8 @@
         border:5px solid transparent;
         border-radius: 50%;
         background: white;
-        animation: cercle 3s linear infinite;
+        animation: cercle 3s linear infinite ;
+        
        
         
   
@@ -24,7 +25,8 @@
              font-size: 27px;
              letter-spacing: 15px;
              
-             animation: flash 3s linear infinite;
+             animation: flash 1.5s linear infinite ;
+             
             }
              & :nth-child(1){
                animation-delay:0.1s;
@@ -57,7 +59,7 @@
           transform: scale(1);
           border-top-color:#9356DC;
           border-bottom-color:#9356DC;
-          
+         
         }
         50% {
           transform: rotate(180deg) scale(1.5);
@@ -80,18 +82,21 @@
         @keyframes flash {
            
             0% {
-                color:yellow;
+                color:black;
                 text-shadow: 0px 0px 7px black; 
                 transform:  scale(1);
             }
+            
             50% {
-              color:black;
+              color:$Secondaire;
               
               transform:  scale(1.25);
-              text-shadow: 0px 0px 7px black; 
+              text-shadow: 0px 0px 7px black;
+
             }
             100%{
-                color:yellow;
+                color:black;
+                
                 text-shadow: 0px 0px 7px black; 
                 transform:  scale(1);
                
@@ -118,31 +123,33 @@
   //fin loader
 
 %animationCoeur {
-    .far{
-        position: absolute;
-        right: 1.5rem;
-        cursor: pointer;
-        font-size: 28px;
-        
-    }
-    .fas{//coeur invisible
+  .far{
+    position: absolute;
+    right: 1.5rem;
+    top: 16.4rem;
+    cursor: pointer;
+    font-size: 28px;
+    
+}
+.fas{//coeur invisible
 
-        position: absolute;
-        right: 1.5rem;
-        cursor: pointer;
-        background: -webkit-gradient(linear, left bottom, left top, color-stop(80%, #9356DC), color-stop(20%, #FF79DA));
-        -webkit-background-clip: text;
-        opacity: 0;
-        font-size: 28px;
-        transition: opacity 1s;
-        color: transparent;
-      
-        &:active{
-           opacity:1;
+    position: absolute;
+    right: 1.5rem;
+    top: 16.4rem;
+    cursor: pointer;
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(80%, #9356DC), color-stop(20%, #FF79DA));
+    -webkit-background-clip: text;
+    opacity: 0;
+    font-size: 28px;
+    transition: opacity 1s;
+    color: transparent;
+  
+    &:active{
+       opacity:1;
+    
         
-            
-        }
     }
+}
 
 }
 
@@ -214,6 +221,7 @@
   0%{
       transform: translateY(50%);
       opacity: 0;
+      
       
       
   }

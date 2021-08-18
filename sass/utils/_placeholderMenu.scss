@@ -4,7 +4,7 @@ body{
    
   }
   *{
-    font-family: "Roboto-Regular";
+    font-family: "RobotoCondensed-BoldItalic";
   }
   #main-la-note-enchante{//juste pour la page la-note-enchante
     display: grid;
@@ -32,14 +32,25 @@ body{
  .grand-div-sections{
   display: flex;
   flex-direction: column;
-  animation:animation-defilement-menu 3s cubic-bezier(.02,1.1,1,1);
+  //animation:animation-defilement-menu 3s cubic-bezier(.02,1.1,1,1);
   
     .div-entrees-plats-desserts {// entrees plats desserts
       @extend %div-entrees-plats-desserts;
        
-    }     
-      
+    }
+  /*.anim-delay1{
+    animation:animation-defilement-menu 3s cubic-bezier(.02,1.1,1,1);
+  }
+  .anim-delay2{
+    animation:animation-defilement-menu 1s cubic-bezier(.02,1.1,1,1);
   } 
+  .anim-delay3{
+    animation:animation-defilement-menu 1s cubic-bezier(.02,1.1,1,1);
+  }*/          
+      
+  }
+ 
+     
 }
   
 %div-entrees-plats-desserts{
@@ -60,14 +71,14 @@ body{
         
         :hover + .div-prix-coche {
          
-          transform:translateX(-95px);
-         
           
-         
+          
+          animation: animeCoche 1s;
+          animation-fill-mode: both;
           .div-coche{
-            visibility: visible;
+            
             i{
-              transform: rotate(0deg) ;
+              transform: rotate(0deg);
             }
           }
   }
@@ -117,7 +128,7 @@ body{
     
       display: flex;
       
-      transition: transform 700ms;
+      
      
        .prix{
         margin: 2.8rem 1rem 0 1rem;
@@ -128,7 +139,7 @@ body{
            
        
         
-         visibility: hidden;  
+        
        
          background-color: $Tertiaire; 
          display: flex;
@@ -143,7 +154,7 @@ body{
             color: $Tertiaire;
             font-size: 20px;
             transform: rotate(-360deg);
-            transition: transform 1s;
+            transition: transform 1.5s;
             border-radius: 50%;
             padding: 5px;
           }
@@ -151,7 +162,16 @@ body{
     }
 }
   
+@keyframes animeCoche {
 
+  from{
+    margin-right: 0px;
+  }
+  to{
+    margin-right: 96px ;
+    
+  }
+}
   
  
 

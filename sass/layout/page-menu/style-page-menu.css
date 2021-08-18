@@ -14,7 +14,7 @@ body {
 }
 
 * {
-  font-family: "Roboto-Regular";
+  font-family: "RobotoCondensed-BoldItalic";
 }
 
 #main-la-note-enchante {
@@ -49,8 +49,15 @@ main .entrees .grand-div-sections, main .plats .grand-div-sections, main .desser
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-animation: animation-defilement-menu 3s cubic-bezier(0.02, 1.1, 1, 1);
-          animation: animation-defilement-menu 3s cubic-bezier(0.02, 1.1, 1, 1);
+  /*.anim-delay1{
+    animation:animation-defilement-menu 3s cubic-bezier(.02,1.1,1,1);
+  }
+  .anim-delay2{
+    animation:animation-defilement-menu 1s cubic-bezier(.02,1.1,1,1);
+  } 
+  .anim-delay3{
+    animation:animation-defilement-menu 1s cubic-bezier(.02,1.1,1,1);
+  }*/
 }
 
 main .entrees .grand-div-sections .div-entrees-plats-desserts, main .plats .grand-div-sections .div-entrees-plats-desserts, main .desserts .grand-div-sections .div-entrees-plats-desserts {
@@ -72,12 +79,10 @@ main .entrees .grand-div-sections .div-entrees-plats-desserts, main .plats .gran
 }
 
 main .entrees .grand-div-sections .div-entrees-plats-desserts :hover + .div-prix-coche, main .plats .grand-div-sections .div-entrees-plats-desserts :hover + .div-prix-coche, main .desserts .grand-div-sections .div-entrees-plats-desserts :hover + .div-prix-coche {
-  -webkit-transform: translateX(-95px);
-          transform: translateX(-95px);
-}
-
-main .entrees .grand-div-sections .div-entrees-plats-desserts :hover + .div-prix-coche .div-coche, main .plats .grand-div-sections .div-entrees-plats-desserts :hover + .div-prix-coche .div-coche, main .desserts .grand-div-sections .div-entrees-plats-desserts :hover + .div-prix-coche .div-coche {
-  visibility: visible;
+  -webkit-animation: animeCoche 1s;
+          animation: animeCoche 1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
 }
 
 main .entrees .grand-div-sections .div-entrees-plats-desserts :hover + .div-prix-coche .div-coche i, main .plats .grand-div-sections .div-entrees-plats-desserts :hover + .div-prix-coche .div-coche i, main .desserts .grand-div-sections .div-entrees-plats-desserts :hover + .div-prix-coche .div-coche i {
@@ -128,10 +133,6 @@ main .entrees .grand-div-sections .div-entrees-plats-desserts .div-prix-coche, m
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-transition: -webkit-transform 700ms;
-  transition: -webkit-transform 700ms;
-  transition: transform 700ms;
-  transition: transform 700ms, -webkit-transform 700ms;
 }
 
 main .entrees .grand-div-sections .div-entrees-plats-desserts .div-prix-coche .prix, main .plats .grand-div-sections .div-entrees-plats-desserts .div-prix-coche .prix, main .desserts .grand-div-sections .div-entrees-plats-desserts .div-prix-coche .prix {
@@ -140,7 +141,6 @@ main .entrees .grand-div-sections .div-entrees-plats-desserts .div-prix-coche .p
 }
 
 main .entrees .grand-div-sections .div-entrees-plats-desserts .div-prix-coche .div-coche, main .plats .grand-div-sections .div-entrees-plats-desserts .div-prix-coche .div-coche, main .desserts .grand-div-sections .div-entrees-plats-desserts .div-prix-coche .div-coche {
-  visibility: hidden;
   background-color: #99E2D0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -159,12 +159,30 @@ main .entrees .grand-div-sections .div-entrees-plats-desserts .div-prix-coche .d
   font-size: 20px;
   -webkit-transform: rotate(-360deg);
           transform: rotate(-360deg);
-  -webkit-transition: -webkit-transform 1s;
-  transition: -webkit-transform 1s;
-  transition: transform 1s;
-  transition: transform 1s, -webkit-transform 1s;
+  -webkit-transition: -webkit-transform 1.5s;
+  transition: -webkit-transform 1.5s;
+  transition: transform 1.5s;
+  transition: transform 1.5s, -webkit-transform 1.5s;
   border-radius: 50%;
   padding: 5px;
+}
+
+@-webkit-keyframes animeCoche {
+  from {
+    margin-right: 0px;
+  }
+  to {
+    margin-right: 96px;
+  }
+}
+
+@keyframes animeCoche {
+  from {
+    margin-right: 0px;
+  }
+  to {
+    margin-right: 96px;
+  }
 }
 
 @-webkit-keyframes cercle {
@@ -211,19 +229,19 @@ main .entrees .grand-div-sections .div-entrees-plats-desserts .div-prix-coche .d
 
 @-webkit-keyframes flash {
   0% {
-    color: yellow;
+    color: black;
     text-shadow: 0px 0px 7px black;
     -webkit-transform: scale(1);
             transform: scale(1);
   }
   50% {
-    color: black;
+    color: #FF79DA;
     -webkit-transform: scale(1.25);
             transform: scale(1.25);
     text-shadow: 0px 0px 7px black;
   }
   100% {
-    color: yellow;
+    color: black;
     text-shadow: 0px 0px 7px black;
     -webkit-transform: scale(1);
             transform: scale(1);
@@ -232,19 +250,19 @@ main .entrees .grand-div-sections .div-entrees-plats-desserts .div-prix-coche .d
 
 @keyframes flash {
   0% {
-    color: yellow;
+    color: black;
     text-shadow: 0px 0px 7px black;
     -webkit-transform: scale(1);
             transform: scale(1);
   }
   50% {
-    color: black;
+    color: #FF79DA;
     -webkit-transform: scale(1.25);
             transform: scale(1.25);
     text-shadow: 0px 0px 7px black;
   }
   100% {
-    color: yellow;
+    color: black;
     text-shadow: 0px 0px 7px black;
     -webkit-transform: scale(1);
             transform: scale(1);
@@ -323,12 +341,13 @@ header div h1 {
   margin: 0;
   text-align: center;
   padding-top: 0.5rem;
+  font-family: 'Shrikhand';
 }
 
 header div a {
   position: absolute;
   top: 1rem;
-  left: 3rem;
+  left: 1rem;
   color: inherit;
 }
 
@@ -396,21 +415,17 @@ main h2 span {
 
 footer {
   color: white;
-  padding: 0 0 5px 40px;
+  padding: 15px 0 5px 40px;
   background: #373535;
 }
 
-footer img {
-  width: 6rem;
-  height: 1rem;
-  padding: 1.7rem 0 1rem 0;
-  -webkit-filter: invert(100%);
-          filter: invert(100%);
+footer span {
+  font-size: 1.2rem;
+  font-family: "Shrikhand";
 }
 
 footer ul {
   padding: 0;
-  margin: 0;
   list-style-type: none;
 }
 

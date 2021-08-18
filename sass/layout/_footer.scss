@@ -1,17 +1,16 @@
 footer {
     color: white;
-    padding: 0 0 5px 40px;
+    padding: 15px 0 5px 40px;
     background: #373535;
-    img{
-        width: 6rem;
-        height: 1rem;
-        padding: 1.7rem 0 1rem 0;
-        filter: invert(100%);// permet d'appliquer des filtres et d'obtenir des effets graphiques de flou, de saturation, etc. Les filtres sont généralement utilisés pour ajuster le rendu d'une image, d'un arrière-plan ou des bordures.
+    span{
+        font-size: 1.2rem;
+      
         
+        font-family: "Shrikhand";
     }  
     ul{
         padding: 0;
-        margin: 0;
+       
         list-style-type: none;
         li{
             margin-bottom: 0.5rem;
