@@ -14,7 +14,7 @@ body {
 }
 
 * {
-  font-family: "Roboto-Regular",sans-serif;
+  font-family: "Roboto-Regular";
 }
 
 #main-la-note-enchante {
@@ -41,6 +41,10 @@ main .entrees, main .plats, main .desserts {
       grid-column-start: 2;
 }
 
+main .entrees h3, main .plats h3, main .desserts h3 {
+  font-weight: 300;
+}
+
 main .entrees .grand-div-sections, main .plats .grand-div-sections, main .desserts .grand-div-sections {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -49,8 +53,8 @@ main .entrees .grand-div-sections, main .plats .grand-div-sections, main .desser
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-animation: animation-defilement-menu 1.5s cubic-bezier(0.02, 1.1, 1, 1);
-          animation: animation-defilement-menu 1.5s cubic-bezier(0.02, 1.1, 1, 1);
+  -webkit-animation: animation-defilement-menu 2s cubic-bezier(0.02, 1.1, 1, 1);
+          animation: animation-defilement-menu 2s cubic-bezier(0.02, 1.1, 1, 1);
 }
 
 main .entrees .grand-div-sections2, main .plats .grand-div-sections2, main .desserts .grand-div-sections2 {
