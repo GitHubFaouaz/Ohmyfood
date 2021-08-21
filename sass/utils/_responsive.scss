@@ -171,9 +171,11 @@
         h3 {
             margin: 15px 0 8px 15px;
             position: relative;
-             @extend %animationCoeur-desktop;
+             
     
         }
+        //@extend %animationCoeur-desktop;
+
     
         
     }

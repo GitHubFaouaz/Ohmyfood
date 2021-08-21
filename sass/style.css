@@ -1,13 +1,11 @@
 @font-face {
-  font-family: 'Roboto-Regular',sans-serif;
-  src: url("../fonts/roboto/Roboto-Regular.ttf");
-  src: url("../../fonts/roboto/Roboto-Regular.ttf");
+  font-family: 'Roboto-Regular';
+  src: url(../../fonts/roboto/Roboto-Regular.ttf);
 }
 
 @font-face {
-  font-family: 'shrikhand',sans-serif;
-  src: url("../fonts/shrikhand/shrikhand.ttf");
-  src: url("../../fonts/shrikhand/Shrikhand-Regular.otf");
+  font-family: 'shrikhand';
+  src: url(../../fonts/shrikhand/Shrikhand-Regular.otf);
 }
 
 body {
@@ -16,7 +14,7 @@ body {
 }
 
 * {
-  font-family: "Roboto-Regular",sans-serif;
+  font-family: "Roboto-Regular";
 }
 
 #div-loader {
@@ -288,31 +286,6 @@ body {
 
 #sectionRestaurant div .fas:active {
   opacity: 1;
-}
-
-#sectionRestaurant h3 .far {
-  position: absolute;
-  right: 1.5rem;
-  cursor: pointer;
-  font-size: 28px;
-}
-
-#sectionRestaurant h3 .fas {
-  position: absolute;
-  right: 1.5rem;
-  cursor: pointer;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(80%, #9356DC), color-stop(20%, #FF79DA));
-  -webkit-background-clip: text;
-  opacity: 0;
-  font-size: 28px;
-  -webkit-transition: opacity 1s;
-  transition: opacity 1s;
-  color: transparent;
-  /*&:hover{
-       opacity: 1;
-    
-        
-    }*/
 }
 
 @-webkit-keyframes animation-defilement-menu {
