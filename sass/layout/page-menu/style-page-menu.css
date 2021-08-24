@@ -290,34 +290,6 @@ main .entrees .grand-div-sections .div-entrees-plats-desserts .div-prix-coche .d
   }
 }
 
-/*%animationCoeur-desktop{
-  .far{
-    position: absolute;
-    right: 1.5rem;
-    cursor: pointer;
-    font-size: 28px;
-    
-}
-.fas{//coeur invisible
-
-    position: absolute;
-    right: 1.5rem;
-    cursor: pointer;
-    background: -webkit-gradient(linear, left bottom, left top, color-stop(80%, #9356DC), color-stop(20%, #FF79DA));
-    -webkit-background-clip: text;
-    opacity: 0;
-    font-size: 28px;
-    transition: opacity 1s;
-    color: transparent;
-  
-    &:hover{
-       opacity: 1;
-    
-        
-    }
-}
-
-}*/
 main h2 .far {
   position: absolute;
   right: 2.5rem;

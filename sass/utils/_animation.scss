@@ -145,23 +145,21 @@
     color: transparent;
   
     &:active{
-       opacity:1;
+       opacity:1!important;
     
         
     }
-}
 
-}
+  
+  } 
+}  
+  
 
-/*%animationCoeur-desktop{
-  .far{
-    position: absolute;
-    right: 1.5rem;
-    cursor: pointer;
-    font-size: 28px;
-    
-}
-.fas{//coeur invisible
+
+
+%animationCoeur-desktopHover{
+  
+.fas{//coeur invisible 
 
     position: absolute;
     right: 1.5rem;
@@ -178,9 +176,10 @@
     
         
     }
-}
+ }
 
-}*/
+     
+}
 
 
 

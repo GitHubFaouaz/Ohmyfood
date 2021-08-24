@@ -35,8 +35,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-animation: vanish 0s;
-          animation: vanish 0s;
+  -webkit-animation: vanish 3s;
+          animation: vanish 3s;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
 }
@@ -285,37 +285,26 @@ body {
 }
 
 #sectionRestaurant div .fas:active {
+  opacity: 1 !important;
+}
+
+#sectionRestaurant .fas {
+  position: absolute;
+  right: 1.5rem;
+  cursor: pointer;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(80%, #9356DC), color-stop(20%, #FF79DA));
+  -webkit-background-clip: text;
+  opacity: 0;
+  font-size: 28px;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+  color: transparent;
+}
+
+#sectionRestaurant .fas:hover {
   opacity: 1;
 }
 
-/*%animationCoeur-desktop{
-  .far{
-    position: absolute;
-    right: 1.5rem;
-    cursor: pointer;
-    font-size: 28px;
-    
-}
-.fas{//coeur invisible
-
-    position: absolute;
-    right: 1.5rem;
-    cursor: pointer;
-    background: -webkit-gradient(linear, left bottom, left top, color-stop(80%, #9356DC), color-stop(20%, #FF79DA));
-    -webkit-background-clip: text;
-    opacity: 0;
-    font-size: 28px;
-    transition: opacity 1s;
-    color: transparent;
-  
-    &:hover{
-       opacity: 1;
-    
-        
-    }
-}
-
-}*/
 @-webkit-keyframes animation-defilement-menu {
   0% {
     -webkit-transform: translateY(50%);
@@ -328,6 +317,7 @@ body {
     opacity: 1;
   }
 }
+
 @keyframes animation-defilement-menu {
   0% {
     -webkit-transform: translateY(50%);
