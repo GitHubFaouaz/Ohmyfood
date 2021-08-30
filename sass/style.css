@@ -1,10 +1,10 @@
 @font-face {
-  font-family: 'Roboto-Regular';
+  font-family: "Roboto-Regular";
   src: url("../../fonts/roboto/Roboto-Regular.ttf");
 }
 
 @font-face {
-  font-family: 'shrikhand';
+  font-family: "shrikhand";
   src: url("../../fonts/shrikhand/Shrikhand-Regular.otf");
 }
 
@@ -55,8 +55,8 @@ body {
 .btn-commander button {
   padding: 1rem 3.5rem;
   border-radius: 2rem;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
-  background-image: linear-gradient(#FF79DA, #9356DC);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
+  background-image: linear-gradient(#ff79da, #9356dc);
   border: 0;
   color: white;
   font-weight: bold;
@@ -76,8 +76,8 @@ body {
 #sectionReservation #reservation--search button {
   padding: 1rem;
   border-radius: 2rem;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
-  background-image: linear-gradient(#FF79DA, #9356DC);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
+  background-image: linear-gradient(#ff79da, #9356dc);
   color: white;
   border: 0;
   font-size: 16px;
@@ -164,8 +164,8 @@ body {
   0% {
     -webkit-transform: scale(1);
             transform: scale(1);
-    border-top-color: #9356DC;
-    border-bottom-color: #9356DC;
+    border-top-color: #9356dc;
+    border-bottom-color: #9356dc;
   }
   50% {
     -webkit-transform: rotate(180deg) scale(1.5);
@@ -176,8 +176,8 @@ body {
   100% {
     -webkit-transform: rotate(360deg) scale(1);
             transform: rotate(360deg) scale(1);
-    border-top-color: #9356DC;
-    border-bottom-color: #9356DC;
+    border-top-color: #9356dc;
+    border-bottom-color: #9356dc;
   }
 }
 
@@ -185,8 +185,8 @@ body {
   0% {
     -webkit-transform: scale(1);
             transform: scale(1);
-    border-top-color: #9356DC;
-    border-bottom-color: #9356DC;
+    border-top-color: #9356dc;
+    border-bottom-color: #9356dc;
   }
   50% {
     -webkit-transform: rotate(180deg) scale(1.5);
@@ -197,8 +197,8 @@ body {
   100% {
     -webkit-transform: rotate(360deg) scale(1);
             transform: rotate(360deg) scale(1);
-    border-top-color: #9356DC;
-    border-bottom-color: #9356DC;
+    border-top-color: #9356dc;
+    border-bottom-color: #9356dc;
   }
 }
 
@@ -210,7 +210,7 @@ body {
             transform: scale(1);
   }
   50% {
-    color: #FF79DA;
+    color: #ff79da;
     -webkit-transform: scale(1.25);
             transform: scale(1.25);
     text-shadow: 0px 0px 7px black;
@@ -231,7 +231,7 @@ body {
             transform: scale(1);
   }
   50% {
-    color: #FF79DA;
+    color: #ff79da;
     -webkit-transform: scale(1.25);
             transform: scale(1.25);
     text-shadow: 0px 0px 7px black;
@@ -275,7 +275,7 @@ body {
   right: 1.5rem;
   top: 16.4rem;
   cursor: pointer;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(80%, #9356DC), color-stop(20%, #FF79DA));
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(80%, #9356dc), color-stop(20%, #ff79da));
   -webkit-background-clip: text;
   opacity: 0;
   font-size: 28px;
@@ -284,25 +284,8 @@ body {
   color: transparent;
 }
 
-#sectionRestaurant div .fas:active {
+#sectionRestaurant div .fas:hover {
   opacity: 1 !important;
-}
-
-#sectionRestaurant .fas {
-  position: absolute;
-  right: 1.5rem;
-  cursor: pointer;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(80%, #9356DC), color-stop(20%, #FF79DA));
-  -webkit-background-clip: text;
-  opacity: 0;
-  font-size: 28px;
-  -webkit-transition: opacity 1s;
-  transition: opacity 1s;
-  color: transparent;
-}
-
-#sectionRestaurant .fas:hover {
-  opacity: 1;
 }
 
 @-webkit-keyframes animation-defilement-menu {
@@ -350,7 +333,7 @@ body {
 }
 
 header h1 {
-  font-family: 'Shrikhand', cursive;
+  font-family: "Shrikhand", cursive;
   margin: 0.5rem 0 0.5rem 0;
   text-align: center;
 }
@@ -434,7 +417,7 @@ header h1 {
 }
 
 #sectionReservation #function div:hover .fas {
-  color: #9356DC;
+  color: #9356dc;
 }
 
 #sectionReservation #function h2 {
@@ -453,7 +436,7 @@ header h1 {
 
 #sectionReservation #function .function-number {
   padding: 4px 8px;
-  background: #9356DC;
+  background: #9356dc;
   border-radius: 50%;
   margin-left: -12px;
   color: white;
@@ -518,7 +501,7 @@ header h1 {
   position: absolute;
   right: 10px;
   top: 17px;
-  background: #99E2D0;
+  background: #99e2d0;
   padding: 4px 7px;
 }
 
@@ -587,7 +570,7 @@ footer a:hover {
     padding-bottom: 0;
     -ms-grid-rows: 100%;
         grid-template-rows: 100%;
-    border-bottom: #9356DC solid 3px;
+    border-bottom: #9356dc solid 3px;
   }
   #sectionReservation #reservation--local p {
     font-size: 24px;
@@ -604,8 +587,8 @@ footer a:hover {
     -ms-grid-rows: 0fr;
         grid-template-rows: 0fr;
     padding-bottom: 3rem;
-    -webkit-box-shadow: 1px 1px 10px #05050538  inset;
-            box-shadow: 1px 1px 10px #05050538  inset;
+    -webkit-box-shadow: 1px 1px 10px #05050538 inset;
+            box-shadow: 1px 1px 10px #05050538 inset;
   }
   #sectionReservation #function h2 {
     -ms-grid-column: 1;
@@ -626,7 +609,7 @@ footer a:hover {
             box-shadow: 0px 0px 5px #050505;
     -ms-grid-columns: 0% 1fr 1fr 0%;
         grid-template-columns: 0% 1fr 1fr 0%;
-    border-top: #9356DC solid 3px;
+    border-top: #9356dc solid 3px;
     gap: 1rem 3rem;
   }
   #sectionRestaurant :nth-child(3) {

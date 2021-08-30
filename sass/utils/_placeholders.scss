@@ -1,36 +1,29 @@
-
-body{
-   
+body {
   margin: 0;
   position: relative;
-  
-  
-          
 }
-*{
+* {
   font-family: "Roboto-Regular";
 }
-#div-loader{
+#div-loader {
   position: fixed;
-    
-    top: 0;
-   right: 0;
-   bottom: 0;
-    height: 100%;
-    width: 100%;
-    z-index: 999;
-    background: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    animation:vanish 3s ; //loading-spinner
-    animation-fill-mode: both;//  indique la façon dont une animation CSS doit appliquer les styles à sa cible avant et après son exécution.
-    @extend %animation-loading-spinner;
-}
-#bloc-page{
 
-margin: auto; 
-max-width: 768px;
-}
+  top: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 999;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
+  animation: vanish 3s; //loading-spinner
+  animation-fill-mode: both; //  indique la façon dont une animation CSS doit appliquer les styles à sa cible avant et après son exécution.
+  @extend %animation-loading-spinner;
+}
+#bloc-page {
+  margin: auto;
+  max-width: 768px;
+}

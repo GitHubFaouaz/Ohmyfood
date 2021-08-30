@@ -2,35 +2,31 @@ footer {
     color: white;
     padding: 15px 0 5px 40px;
     background: #373535;
-    span{
+    span {
         font-size: 1.2rem;
-      
-        
         font-family: "Shrikhand";
-    }  
-    ul{
+    }
+    ul {
         padding: 0;
-       
+
         list-style-type: none;
-        li{
+        li {
             margin-bottom: 0.5rem;
         }
-        .fa-utensils{
+        .fa-utensils {
             margin-right: 10px;
         }
-        .fa-hands-helping{
+        .fa-hands-helping {
             margin-right: 7px;
             font-size: 13px;
-        }   
+        }
+    }
+    a {
+        text-decoration: none;
+        color: inherit;
 
-        
+        &:hover {
+            text-decoration: underline;
+        }
     }
-    a{
-      text-decoration: none;
-      color: inherit;
-      
-      &:hover{
-          text-decoration: underline;
-      }
-    }
-  }
+}
