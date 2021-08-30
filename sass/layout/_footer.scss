@@ -1,0 +1,32 @@
+footer {
+    color: white;
+    padding: 15px 0 5px 40px;
+    background: #373535;
+    span {
+        font-size: 1.2rem;
+        font-family: "Shrikhand";
+    }
+    ul {
+        padding: 0;
+
+        list-style-type: none;
+        li {
+            margin-bottom: 0.5rem;
+        }
+        .fa-utensils {
+            margin-right: 10px;
+        }
+        .fa-hands-helping {
+            margin-right: 7px;
+            font-size: 13px;
+        }
+    }
+    a {
+        text-decoration: none;
+        color: inherit;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

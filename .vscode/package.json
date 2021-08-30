@@ -1,0 +1,14 @@
+{
+  "name": "userpc",
+  "version": "1.0.0",
+  "description": "projet 3",
+  "main": "index.js",
+  "scripts": {
+    "test": "../OpenClassRooms>PROJET 3/css/style.css",
+    "prefix":"postcss ./OpenClassRooms>PROJET 3/css/style.css --use autoprefixer -d ./public/css/prefixed/"
+  },
+  "author": "faouaz",
+  "license": "ISC",
+  "browserslist": "last 4 versions"
+
+}

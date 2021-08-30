@@ -1,0 +1,21 @@
+header {
+   div {
+      h1 {
+         margin: 0;
+         text-align: center;
+         padding-top: 0.5rem;
+         font-family: "Shrikhand", cursive;
+      }
+      a {
+         position: absolute;
+         top: 1rem;
+         left: 1rem;
+         color: inherit;
+      }
+   }
+   #img-photo {
+      object-fit: cover;
+      height: 350px;
+      width: 100%;
+   }
+}

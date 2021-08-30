@@ -1,0 +1,144 @@
+body {
+    background: $gris;
+    margin: 0;
+}
+* {
+    font-family: "Roboto-Regular";
+}
+#main-la-note-enchante {
+    //juste pour la page la-note-enchante
+    display: grid;
+    grid-template-columns: 3% 94% 3%;
+    grid-template-rows: 4rem 1fr 0.8fr 0.8fr 6rem;
+    background: $gris;
+    border-radius: 2rem 2rem 0 0;
+    position: relative;
+    top: -2rem;
+}
+%h3-page-secondaire {
+    width: 2.5rem;
+    border-bottom: 3px solid $Tertiaire;
+    padding-bottom: 0.5rem;
+}
+%sections {
+    grid-column-start: 2;
+
+    h3 {
+        @extend %h3-page-secondaire;
+        font-weight: 300;
+    }
+    .grand-div-sections {
+        display: flex;
+        flex-direction: column;
+
+        animation: animation-defilement-menu 3s cubic-bezier(0.02, 1.1, 1, 1);
+
+        .div-entrees-plats-desserts {
+            // entrees plats desserts
+            @extend %div-entrees-plats-desserts;
+        }
+    }
+    .grand-div-sections2 {
+        display: flex;
+        flex-direction: column;
+
+        animation: animation-defilement-menu 4s cubic-bezier(0.02, 1.1, 1, 1);
+
+        .div-entrees-plats-desserts {
+            // entrees plats desserts
+            @extend %div-entrees-plats-desserts;
+        }
+    }
+    .grand-div-sections3 {
+        display: flex;
+        flex-direction: column;
+
+        animation: animation-defilement-menu 6s cubic-bezier(0.02, 1.1, 1, 1);
+
+        .div-entrees-plats-desserts {
+            // entrees plats desserts
+            @extend %div-entrees-plats-desserts;
+        }
+    }
+}
+
+%div-entrees-plats-desserts {
+    width: 100%;
+
+    border-radius: 1rem;
+    background: white;
+    margin-bottom: 1rem;
+    box-shadow: 2px 2px 3px $gris-shadow;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden; // l'animation commence à l'interieur
+
+    :hover + .div-prix-coche {
+        animation: animeCoche 1s;
+        animation-fill-mode: both;
+        .div-coche {
+            i {
+                transform: rotate(0deg);
+            }
+        }
+    }
+    .desc-menu {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+
+        overflow: hidden;
+    }
+    h4 {
+        margin: 1rem 0px 0px 1rem;
+        white-space: nowrap;
+        text-overflow: ellipsis; // pour les pointillés
+        overflow: hidden;
+        font-size: 18px;
+
+        strong {
+            padding: 0;
+        }
+    }
+    p {
+        margin: 0;
+        padding: 0.5rem 0rem 1rem 1rem;
+        white-space: nowrap;
+        text-overflow: ellipsis; // pour les pointillés
+        overflow: hidden;
+        font-size: 18px;
+
+        span {
+            padding: 0;
+        }
+    }
+    .div-prix-coche {
+        display: flex;
+
+        .prix {
+            margin: 2.8rem 1rem 0 1rem;
+            font-weight: bold;
+        }
+        .div-coche {
+            background-color: $Tertiaire;
+            display: flex;
+
+            align-items: center;
+            padding: 0 2rem 0 2rem;
+            border-radius: 0 1rem 1rem 0rem;
+            margin: 0 -96px 0 0;
+
+            i {
+                background-color: white;
+                color: $Tertiaire;
+                font-size: 20px;
+                transform: rotate(-360deg);
+                transition: transform 1s;
+                border-radius: 50%;
+                padding: 5px;
+            }
+        }
+    }
+}
