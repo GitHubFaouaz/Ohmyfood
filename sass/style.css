@@ -629,6 +629,7 @@ footer a:hover {
 @media screen and (min-width: 992px) {
   #bloc-page {
     max-width: 1950px;
+    margin: auto;
   }
   #sectionReservation {
     -ms-grid-columns: 2fr;
