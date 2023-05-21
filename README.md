@@ -1,1 +1,1 @@
-Projet 2 : Resrvia OpenClassrooms
+Projet 2 : Reservia OpenClassrooms
