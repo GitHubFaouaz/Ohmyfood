@@ -1,1 +1,1 @@
-Projet 2 : Booki - OpenClassrooms
+Projet 2 : Resrvia OpenClassrooms
