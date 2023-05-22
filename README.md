@@ -14,5 +14,5 @@ Intégrer la maquette créée par le designer UI en mobilefirst en respectant le
 
 HTML5 / CSS3 / SASS
 
-- Voir le site web :https://githubfaouaz.github.io/FaouazAbdallah_3_30062021/
+- Voir le site web :https://githubfaouaz.github.io/Ohmyfood/
 - Portfolio : ''
