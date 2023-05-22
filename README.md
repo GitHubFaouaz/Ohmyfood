@@ -1,5 +1,7 @@
 # Projet 3 : Ohmyfood
 
+![Ohmyfood](images/ohmyfood.webp?raw=true "Cover Ohmyfood OpenClassrooms ")
+
 ## Contexte :
 
 Ohmyfood! est une jeune startup voulant s'imposer sur le marché de la restauration. En plus des systèmes classiques de réservation, les clients pourront composer le menu de leur repas pour que les plats soient prêts à leur arrivée.
