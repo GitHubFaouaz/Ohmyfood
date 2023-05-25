@@ -8,7 +8,7 @@ Ohmyfood! est une jeune startup voulant s'imposer sur le marché de la restaurat
 
 ## Objectifs :
 
-Intégrer la maquette créée par le designer UI en mobilefirst en respectant les contraintes graphiques et d'animations, sans utiliser de JavaScript. Mise en page libre pour les versions desktop et tablette.
+La maquette a été intégrée en adoptant une approche "mobile-first" tout en respectant les contraintes graphiques et d'animations, sans nécessiter l'utilisation de JavaScript. La mise en page a été conçue de manière flexible pour s'adapter aux versions desktop et tablette.
 
 ## Langages utilisés :
 
